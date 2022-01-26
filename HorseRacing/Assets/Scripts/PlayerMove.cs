@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     public Vector3 dir;
     public float minSpeed;
     public float maxSpeed;
+    public bool doMove;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,8 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if(doMove)
+            Move();
     }
     private void Move()
     {
