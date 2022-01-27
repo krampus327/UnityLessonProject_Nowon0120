@@ -15,14 +15,16 @@ public class CameraHandler : MonoBehaviour
     // 2. 1등말의 위치를 가져온다.
     // 3. 카메라의 위치를 1등말의 위치에다가 특정거리만큼 떨어뜨린다.
 
+    static public CameraHandler instance;
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+    }
     Transform tr;
     Transform target;
     int targetIndex;
     public Vector3 offset;
-    private void Awake()
-    {
-
-    }
+    [SerializeField] private Transform platformCampoint;
     private void Start()
     {
         tr = this.gameObject.GetComponent<Transform>();
@@ -46,5 +48,12 @@ public class CameraHandler : MonoBehaviour
     public void SwitchTargetTo1Grade()
     {
         target = RacingPlay.instance.Get1GradePlayer();
+    }
+
+    public void MoveToFlatform()
+    {
+        tr.position = platformCampoint.position;
+        tr.rotation = platformCampoint.rotation;
+
     }
 }
