@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  destroyEffact: {fileID: 4279159306509003490, guid: 002510bf8d0239b40a527f18f1b25105, type: 3}
 --- !u!54 &7929492962041302219
 Rigidbody:
   m_ObjectHideFlags: 0
