@@ -109,8 +109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fbea87970cd61d4fb38c757fc3bf7c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 10
   speed: 1
   destroyEffact: {fileID: 4279159306509003490, guid: 002510bf8d0239b40a527f18f1b25105, type: 3}
+  AIPercent: 10
 --- !u!54 &7929492962041302219
 Rigidbody:
   m_ObjectHideFlags: 0

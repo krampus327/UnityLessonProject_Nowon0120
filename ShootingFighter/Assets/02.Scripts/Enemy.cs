@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] private float score;
+    [SerializeField] private float damage;
     [SerializeField] private float speed;
     [SerializeField] private GameObject destroyEffact;
     Transform tr;
@@ -49,11 +51,24 @@ public class Enemy : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            Player player = collision.gameObject.GetComponent<Player>();
+            player.HP -= damage;
+            //ÆÄ±«ÀÌÆåÆ®
+            GameObject effectGO = Instantiate(destroyEffact);
+            effectGO.transform.position = tr.position;
+            Destroy(this.gameObject);
+        }
+
         if(collision.gameObject.layer == LayerMask.NameToLayer("PlayerWeapon"))
         {
             // todo => ÆÄ±« ÀÌÆåÆ®
             GameObject effectGO = Instantiate(destroyEffact);
             effectGO.transform.position = tr.position;
+            GameObject playerGO = GameObject.Find("Player");
+            playerGO.GetComponent<Player>().score += score;
+
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
