@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 273779181}
   - component: {fileID: 273779183}
   - component: {fileID: 273779182}
+  - component: {fileID: 273779184}
   m_Layer: 5
   m_Name: PlayerHPText
   m_TagString: Untagged
@@ -276,6 +277,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273779180}
   m_CullTransparentMesh: 1
+--- !u!114 &273779184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273779180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e5243cffe01a74d8579623ff149d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPInit: 0
+  HPMax: 0
+  HPText: {fileID: 0}
+  HPSlider: {fileID: 0}
+  scoreText: {fileID: 0}
 --- !u!1 &632607792
 GameObject:
   m_ObjectHideFlags: 0

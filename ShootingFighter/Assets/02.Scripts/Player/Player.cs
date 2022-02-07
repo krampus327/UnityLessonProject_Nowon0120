@@ -13,9 +13,9 @@ public class Player : MonoBehaviour
         set
         {
             _HP = value;
-            int HPint = (int)value;
+            int HPint = (int)_HP;
             HPText.text = HPint.ToString();
-            HPSlider.value = value / HPMax;
+            HPSlider.value = _HP / HPMax;
         }
         get
         {
@@ -27,7 +27,6 @@ public class Player : MonoBehaviour
     [SerializeField] private Text HPText;
     [SerializeField] private Slider HPSlider;
     [SerializeField] private Text scoreText;
-
     private void Awake()
     {
         HP = HPInit;
@@ -39,7 +38,8 @@ public class Player : MonoBehaviour
         {
             _score = value;
             int scoreint = (int)_score;
-            scoreText.text = scoreint.ToString;
+            //scoreText.text = scoreint.ToString();
+            GameManager.instance.CheckScoreAndMoveStage(scoreint);
         }
         get
         {
