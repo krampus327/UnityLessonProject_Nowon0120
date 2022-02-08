@@ -1,9 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    private float _HP; // 변수이름앞에 _ 혹은 m_ 혹은 m이 붙으면 멤버 변수 (특히 private) 지칭
+    public float HP
+    {
+        set
+        {
+            _HP = value;
+            int HPint = (int)_HP;
+            HPText.text = HPint.ToString();
+            HPSlider.value = _HP / HPMax;
+            if (_HP <= 0)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        get
+        {
+            return _HP;
+        }
+    }
+    [SerializeField] private float HPInit;
+    [SerializeField] private float HPMax;
+    [SerializeField] private Text HPText;
+    [SerializeField] private Slider HPSlider;
+
+    [SerializeField] private Text scoreText;
     [SerializeField] private float score;
     [SerializeField] private float damage;
     [SerializeField] private float speed;
@@ -18,6 +44,7 @@ public class Enemy : MonoBehaviour
     }
     private void Start()
     {
+        HP = HPInit;
         SetTarget_RandomlyToPlayer(AIPercent);
     }
     private void Update()
@@ -69,8 +96,17 @@ public class Enemy : MonoBehaviour
             GameObject playerGO = GameObject.Find("Player");
             playerGO.GetComponent<Player>().score += score;
 
-            Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }
     }
+    public void DestroyByPlayerWeapon()
+    {
+        GameObject effectGO = Instantiate(destroyEffact);
+        effectGO.transform.position = tr.position;
+        GameObject playerGO = GameObject.Find("Player");
+        playerGO.GetComponent<Player>().score += score;
+
+        Destroy(this.gameObject);
+    }
+    
 }

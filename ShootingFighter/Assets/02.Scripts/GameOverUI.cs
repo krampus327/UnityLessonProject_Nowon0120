@@ -7,7 +7,7 @@ public class GameOverUI : MonoBehaviour
     public void RetryGame()
     {
         SceneMover.instance.MoveSceneByIndex(1);
-    }
+    }           
     public void QuitGame()
     {
         Application.Quit();
