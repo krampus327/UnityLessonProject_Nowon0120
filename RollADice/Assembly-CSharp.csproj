@@ -53,14 +53,15 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\02.Script\DicePlayManager.cs" />
-    <Compile Include="Assets\02.Script\Player.cs" />
-    <Compile Include="Assets\02.Script\TileInfo.cs" />
-    <Compile Include="Assets\02.Script\TileInfo_Dice.cs" />
     <Compile Include="Assets\02.Script\TileInfo_GoldenDice.cs" />
-    <Compile Include="Assets\02.Script\TileInfo_Star.cs" />
-    <Compile Include="Assets\02.Script\TileInfo_Inverse.cs" />
     <Compile Include="Assets\02.Script\DicePlayUI.cs" />
+    <Compile Include="Assets\02.Script\DicePlayManager.cs" />
+    <Compile Include="Assets\02.Script\TileInfo_Star.cs" />
+    <Compile Include="Assets\02.Script\Player.cs" />
+    <Compile Include="Assets\02.Script\TileInfo_Inverse.cs" />
+    <Compile Include="Assets\02.Script\TileInfo_Dice.cs" />
+    <Compile Include="Assets\02.Script\TileInfo.cs" />
+    <Compile Include="Assets\02.Script\DiceAnimationUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -662,6 +663,9 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
