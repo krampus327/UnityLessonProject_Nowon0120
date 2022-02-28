@@ -213,6 +213,8 @@ MonoBehaviour:
   jumpState: 0
   runState: 0
   attackState: 0
+  dashState: 0
+  dashAttackState: 0
 --- !u!114 &159976783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,7 +453,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1459458051413904079, guid: 3accdbde4e56f5c4e9cfa311b8cef55f, type: 3}
+  m_Sprite: {fileID: 2896272659956946786, guid: ae72133dacba6ec4eb33ecde48f50e56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
