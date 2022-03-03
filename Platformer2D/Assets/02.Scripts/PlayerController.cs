@@ -50,8 +50,18 @@ public class PlayerController : MonoBehaviour
     float attackTime;
     float dashTime;
     float dashAttackTime;
+
+    // kinematic
+    public Vector2 knockBackForce;
+
+    // casting
+    public Vector2 attackCastingCenter;
+    public Vector2 attackCastingSize;
+    public Vector2 attackCastingDirection;
+    public Vector2 attackTargetLayer;
     private void Awake()
     {
+        player = GetComponent<Player>();
         tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
@@ -283,6 +293,16 @@ public class PlayerController : MonoBehaviour
             case AttackState.Attacking:
                 if (animationTimeElapsed > attackTime)
                 {
+                    RaycastHit2D hit = Physics2D.BoxCast(rb.position + attackCastingCenter,
+                        attackCastingSize, 0f, attackCastingDirection, attackTargetLayer);
+                    if (hit.collider != null)
+                    {
+                        Enemy enemy = null;
+                        if(hit.collider.TryGetComponent(out enemy))
+                        {
+                            enemy.hp = -=Attack
+                        }
+                    }
                     attackState = AttackState.Attacked;
                 }
                 animationTimeElapsed += Time.deltaTime;
@@ -399,6 +419,20 @@ public class PlayerController : MonoBehaviour
         return isOK;
     }
 
+    public void knockBack()
+    {
+        move = Vector2.zero;
+        rb.velocity = Vector2.zero;
+        rb.AddForce(new Vector2(knockBackForce.x * (-direction), knockBackForce.y), ForceMode2D, Impulse);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Rigidbody2D.rigidbody = new Rigidbody2D();
+        Gizmos.DrawWireCube(new Vector3(rigidbody.position.x + attackCastingCenter.x,
+            rigidbody)
+    }
     public enum PlayerState
     {
         Idle,

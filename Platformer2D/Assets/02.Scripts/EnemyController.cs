@@ -32,6 +32,7 @@ public class EnemyController : MonoBehaviour
     float dieTime;
 
     // movement
+    Transform tr;
     Rigidbody2D rb;
     CapsuleCollider2D col;
     Vector2 move;
@@ -46,7 +47,10 @@ public class EnemyController : MonoBehaviour
 
     private void Awake()
     {
+        tr = GetComponent<Transform>();
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+        col = GetComponent<CapsuleCollider2D>();
 
         hurtTime = GetAnimationTime("Hurt");
         dieTime = GetAnimationTime("Die");
@@ -73,6 +77,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateAI();
         // todo -> UpdataAI();
         if (move.x < 0) direction = -1;
         else if (move.x > 0) direction = 1;
@@ -126,7 +131,7 @@ public class EnemyController : MonoBehaviour
                 aiStateTimeElapsed += Time.deltaTime;
                 break;
             case AIState.FollowTarget:
-                Collider2D targetCol = Physics2D.OverlapCircle(rb.position, autoFollowRangeRadius);
+                Collider2D targetCol = Physics2D.OverlapCircle(rb.position, autoFollowRangeRadius, playerLayer);
                 if(targetCol == null)
                     aiState = AIState.DecideRandomBehavior;
                 else
@@ -134,7 +139,7 @@ public class EnemyController : MonoBehaviour
                     Transform targetTransform = targetCol.transform;
                     if (targetTransform.position.x > rb.position.x + col.size.x)
                         move.x = 1;
-                    else if (targetTransform.position.x > rb.position.x - col.size.x)
+                    else if (targetTransform.position.x < rb.position.x - col.size.x)
                         move.x = -1;
                 }
                 break;

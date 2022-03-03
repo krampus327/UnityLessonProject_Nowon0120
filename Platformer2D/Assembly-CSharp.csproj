@@ -56,6 +56,8 @@
     <Compile Include="Assets\02.Scripts\PlayerGroundDetector.cs" />
     <Compile Include="Assets\02.Scripts\PlayerController.cs" />
     <Compile Include="Assets\02.Scripts\EnemyController.cs" />
+    <Compile Include="Assets\02.Scripts\Enemy.cs" />
+    <Compile Include="Assets\02.Scripts\Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Warrior free set\License.txt" />
