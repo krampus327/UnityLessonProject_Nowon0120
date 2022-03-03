@@ -104,7 +104,7 @@ public class EnemyController : MonoBehaviour
             case AIState.DecideRandomBehavior:
                 aiStateTime = Random.Range(1f, 5f);
                 aiStateTimeElapsed = 0f;
-                aiState = (AIState)Random.Range(1~4);
+                aiState = (AIState)Random.Range(1, 4);
                 break;
             case AIState.TakeARest:
                 if(aiStateTimeElapsed > aiStateTime)
@@ -134,8 +134,8 @@ public class EnemyController : MonoBehaviour
                     Transform targetTransform = targetCol.transform;
                     if (targetTransform.position.x > rb.position.x + col.size.x)
                         move.x = 1;
-                    else if(targetTransform.position.x > rb.position.x - col.size.x)
-                        move.x = -1
+                    else if (targetTransform.position.x > rb.position.x - col.size.x)
+                        move.x = -1;
                 }
                 break;
         }
