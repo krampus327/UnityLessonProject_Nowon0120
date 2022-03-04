@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,11 +10,18 @@ public class Enemy : MonoBehaviour
     {
         set
         {
-            _hp = value;
+            int tmpValue = value;
+            if (tmpValue <= 0)
+                tmpValue = 0;
+            _hp = tmpValue;
+            hpText.text = _hp.ToString();
+            hpBar.value = (float)_hp / hpMax;
         }
         get { return _hp; }
     }
     public int hpMax;
+    public Slider hpBar;
+    public Text hpText;
 
     public int damage = 2;
 
@@ -27,11 +35,11 @@ public class Enemy : MonoBehaviour
         GameObject go = collision.gameObject;
         if (go == null) return;
 
-        if(go.layer == LayerMask.NameToLayer("Player"))
+        if (go.layer == LayerMask.NameToLayer("Player"))
         {
             Player player = go.GetComponent<Player>();
             PlayerController controller = go.GetComponent<PlayerController>();
-            controller.knockBack();
+            controller.KnockBack();
             player.Hurt(damage);
         }
     }

@@ -53,14 +53,19 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\02.Scripts\Player.cs" />
+    <Compile Include="Assets\02.Scripts\Enemy.cs" />
     <Compile Include="Assets\02.Scripts\PlayerGroundDetector.cs" />
     <Compile Include="Assets\02.Scripts\PlayerController.cs" />
     <Compile Include="Assets\02.Scripts\EnemyController.cs" />
-    <Compile Include="Assets\02.Scripts\Enemy.cs" />
-    <Compile Include="Assets\02.Scripts\Player.cs" />
+    <Compile Include="Assets\02.Scripts\PlayerEdgeDetector.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\SimplePixelUI\fonts\Font2\license.txt" />
     <None Include="Assets\Warrior free set\License.txt" />
+    <None Include="Assets\SimplePixelUI\fonts\Font1\license.txt" />
+    <None Include="Assets\SimplePixelUI\fonts\Font1\readme.txt" />
+    <None Include="Assets\SimplePixelUI\fonts\Font2\readme.txt" />
     <None Include="Assets\Warrior free set\Contact.txt" />
   </ItemGroup>
   <ItemGroup>
