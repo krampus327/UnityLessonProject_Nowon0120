@@ -1,8 +1,9 @@
 using UnityEngine;
 
+[System.Serializable]
 public class NoteData
 {
     public float time;
-    public KeyCode keycode;
+    public KeyCode keyCode;
 }
 
