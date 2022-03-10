@@ -50,25 +50,28 @@ public class NotesMaker : MonoBehaviour
         NoteData noteData = new NoteData();
 
         float tmpTime = (float)vp.time * 1000;
+        int tmpTimeInt = (int)tmpTime;
+        Debug.Log(tmpTimeInt);
         if (tmpTime % 10 < 5)
         {
-            tmpTime /= 10;
+            tmpTimeInt /= 10;
         }
         else
         {
-            tmpTime /= 10;
-            tmpTime++;
+            tmpTimeInt /= 10;
+            tmpTimeInt++;
         }
-        int tmpTimeInt = (int)tmpTime;
-        float roundedTime = (float)tmpTime / 100;
-
+        Debug.Log(tmpTimeInt);
+        float roundedTime = (float)tmpTimeInt / 100;
+        Debug.Log(roundedTime);
+        noteData.time = roundedTime;
         noteData.keyCode = keyCode;
         songData.notes.Add(noteData);
-        Debug.Log($"Create note{keyCode}");
+        Debug.Log($"Created note {keyCode}");
     }
     private void SaveSongData()
     {
-        Debug.Log($"Save Song");
+        Debug.Log("Save SongData ");
         // panel 만 띄우고 선택시 디렉토리 문자열 반환 (저장하지 않음)
         string dir = EditorUtility.SaveFilePanel("저장할 곳을 지정하세요", "", $"{songData.videoName}", "json");
         // 실제 song data 를 json 포멧으로 저장
