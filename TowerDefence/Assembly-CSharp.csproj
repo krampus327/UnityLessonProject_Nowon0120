@@ -53,8 +53,11 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\02.Scripts\GameManager.cs" />
     <Compile Include="Assets\02.Scripts\LevelSelector.cs" />
+    <Compile Include="Assets\02.Scripts\GameManager.cs" />
+    <Compile Include="Assets\02.Scripts\Node.cs" />
+    <Compile Include="Assets\02.Scripts\EnemyMove.cs" />
+    <Compile Include="Assets\02.Scripts\WayPoints.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
