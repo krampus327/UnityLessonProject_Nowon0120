@@ -22,8 +22,8 @@ public class EnemyMove : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 targetPos = new Vector3(nextWayPoint.position.x, originPosY, nextWayPoint.position.z);
-        Vector3 dir = (nextWayPoint.position - tr.position).normalized;
-        
+        Vector3 dir = (targetPos - tr.position).normalized;
+
         if(Vector3.Distance(tr.position, targetPos) < 0.1f)
         {
             if (WayPoints.TryGetNextWayPoint(wayPointIndex, out nextWayPoint))
@@ -32,12 +32,16 @@ public class EnemyMove : MonoBehaviour
             }
             else
             {
-                // hurt player & destroy this
+                
+                OnReachedToEnd();
             }
         }
 
         tr.Translate(dir * speed * Time.fixedDeltaTime, Space.World);
     }
-
+    private void OnReachedToEnd()
+    {
+        Destroy(gameObject);
+    }
 
 }
