@@ -4,37 +4,45 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] PoolElement[] poolElements;
-    private List<GameObject> enemies;
-    public int spawnNum;
-    public float spawnTimeGap;
-    private float elapsedTime;
-
+    [SerializeField] SpawnElement[] spawnElements;
+    [System.Serializable]
+    class SpawnElement
+    {
+        public PoolElement PoolElement;
+        public float spawnTimeGap;
+    }
+    float[] spawnTimer;
     Transform tr;
     private void Awake()
     {
         tr = transform;
-        enemies = new List<GameObject>();
-        foreach(PoolElement poolElement in poolElements)
+        spawnTimer = new float[spawnElements.Length];
+        for (int i = 0; i< spawnElements.Length; i++)
         {
-            ObjectPool.instance.AddPoolElement
+            spawnTimer[i] = spawnElements[i].spawnTimeGap;
+            ObjectPool.instance.AddPoolElement(spawnElements[i].PoolElement);
         }
     }
     private void Update()
     {
-        int num = enemies.Count;
-        if(num < spawnNum)
+        for (int i = 0; i < spawnElements.Length; i++)
         {
-            if(elapsedTime > spawnTimeGap)
+            string tmpTag = spawnElements[i].PoolElement.tag;
+            int num = ObjectPool.GetSpawnedObjectNumber(tmpTag);
+            if (num < spawnElements[i].PoolElement.size)
             {
-                Spawn();
-                elapsedTime = 0;
+                if (spawnTimer[i] < 0)
+                {
+                    Spawn(tmpTag);
+                    spawnTimer[i] = spawnElements[i].spawnTimeGap;
+                }
+                else
+                    spawnTimer[i] -= Time.deltaTime;
             }
-            elapsedTime += Time.deltaTime;
         }
     }
-    private void Spawn()
+    private void Spawn(string tag)
     {
-        
+        ObjectPool.SpawnFromPool(tag, tr.position);
     }
 }

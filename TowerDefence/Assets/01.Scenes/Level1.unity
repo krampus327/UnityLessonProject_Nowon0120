@@ -5767,9 +5767,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324f04411472aa44f8fa5d7239af48e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8416584701230803610, guid: 5f279329a1b9c4346a5a4c25fa94b0e6, type: 3}
-  spawnNum: 10
-  spawnTimeGap: 1
+  spawnElements:
+  - PoolElement:
+      tag: Enemy
+      prefab: {fileID: 8416584701230803610, guid: 5f279329a1b9c4346a5a4c25fa94b0e6, type: 3}
+      size: 10
+    spawnTimeGap: 1
+  - PoolElement:
+      tag: Cube
+      prefab: {fileID: 2676784799321101862, guid: 925458905ab2d9346b39b08b6b1178a3, type: 3}
+      size: 10
+    spawnTimeGap: 1
 --- !u!4 &754733463
 Transform:
   m_ObjectHideFlags: 0
