@@ -58,8 +58,12 @@
     <Compile Include="Assets\02.Scripts\Node.cs" />
     <Compile Include="Assets\02.Scripts\LevelSelector.cs" />
     <Compile Include="Assets\02.Scripts\GameManager.cs" />
-    <Compile Include="Assets\02.Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\02.Scripts\ObjectPool.cs" />
+    <Compile Include="Assets\02.Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\02.Scripts\Tower\TowerInfo.cs" />
+    <Compile Include="Assets\02.Scripts\Tower\Tower.cs" />
+    <Compile Include="Assets\02.Scripts\Tower\TowerHandler.cs" />
+    <Compile Include="Assets\02.Scripts\Tower\TowerViewPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

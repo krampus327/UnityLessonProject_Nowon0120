@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour
     {
         public PoolElement PoolElement;
         public float spawnTimeGap;
+        public bool done;
     }
     float[] spawnTimer;
     Transform tr;
@@ -29,16 +30,22 @@ public class EnemySpawner : MonoBehaviour
         {
             string tmpTag = spawnElements[i].PoolElement.tag;
             int num = ObjectPool.GetSpawnedObjectNumber(tmpTag);
-            if (num < spawnElements[i].PoolElement.size)
+            if (spawnElements[i].done == false)
             {
-                if (spawnTimer[i] < 0)
+                if (num < spawnElements[i].PoolElement.size)
                 {
-                    Spawn(tmpTag);
-                    spawnTimer[i] = spawnElements[i].spawnTimeGap;
+                    if (spawnTimer[i] < 0)
+                    {
+                        Spawn(tmpTag);
+                        spawnTimer[i] = spawnElements[i].spawnTimeGap;
+                    }
+                    else
+                        spawnTimer[i] -= Time.deltaTime;
                 }
                 else
-                    spawnTimer[i] -= Time.deltaTime;
+                    spawnElements[i].done = true;
             }
+            
         }
     }
     private void Spawn(string tag)
