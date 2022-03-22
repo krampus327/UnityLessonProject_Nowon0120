@@ -27,7 +27,12 @@ public class ObjectPool : MonoBehaviour
 
     private void Start()
     {
-        foreach(PoolElement poolElement in poolElements)
+        StartCoroutine(E_Start());
+    }
+    IEnumerator E_Start()
+    {
+        yield return new WaitUntil(() => TowerAssets.Instance != null);
+        foreach (PoolElement poolElement in poolElements)
         {
             spawnedQueueDictionary.Add(poolElement.tag, new Queue<GameObject>());
             for (int i = 0; i < poolElement.size; i++)
