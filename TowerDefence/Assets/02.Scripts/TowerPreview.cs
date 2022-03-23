@@ -5,5 +5,4 @@ using UnityEngine;
 internal class TowerPreview : MonoBehaviour
 {
     public string towerName;
-    
 }

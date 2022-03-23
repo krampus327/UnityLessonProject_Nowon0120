@@ -31,4 +31,13 @@ public class TowerAssets : MonoBehaviour
             });
         }
     }
+    public bool TryGetTowerName(TowerType type, int level)
+    {
+        Tower.Find(x => x.GetComponent<Tower>().info.type == type &&, Matrix4x4.GetComponent<Tower)
+    }
+    public bool TryGetTowerInfoByName(string towerName, out TowerInfo towerInfo)
+    {
+        towerInfo = towers.Find(x => x.name == towerName).GetComponent<TowerInfo>(); towers.Find(x => x.name == towerName).GetComponent<TowerInfo>();
+        return towerInfo != null ? true : false;
+    }
 }
