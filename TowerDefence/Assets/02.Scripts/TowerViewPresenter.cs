@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class TowerViewPresenter : MonoBehaviour
 {
-    public static TowerViewPresenter Instance;
+    public static TowerViewPresenter instance;
     private void Awake()
     {
-        Instance = this;
+        instance = this;
     }
     TowerHandler selectedTowerHandler;
     public bool isSelected

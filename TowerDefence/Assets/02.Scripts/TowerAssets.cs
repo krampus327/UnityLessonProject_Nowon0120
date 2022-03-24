@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TowerAssets : MonoBehaviour
 {
-    public static TowerAssets _instance;
-    public static TowerAssets Instance
+    private static TowerAssets _instance;
+    public static TowerAssets instance
     {
         get
         {
@@ -17,11 +17,12 @@ public class TowerAssets : MonoBehaviour
             return _instance;
         }
     }
-    public List<GameObject> towers = new List<GameObject> ();
+
+    public List<GameObject> towers = new List<GameObject>();
 
     public void RegisterAllTowerToObjectPool()
     {
-        foreach(GameObject tower in towers)
+        foreach (GameObject tower in towers)
         {
             ObjectPool.instance.AddPoolElement(new PoolElement
             {
@@ -31,13 +32,21 @@ public class TowerAssets : MonoBehaviour
             });
         }
     }
-    public bool TryGetTowerName(TowerType type, int level)
+
+    public bool TryGetTowerName(TowerType type, int level, out string towerName)
     {
-        Tower.Find(x => x.GetComponent<Tower>().info.type == type &&, Matrix4x4.GetComponent<Tower)
+        towerName = String.Empty;
+        if(level < 4)
+        {
+            towerName = towers.Find(x => x.GetComponent<Tower>().info.type == type &&
+                                x.GetComponent<Tower>().info.level == level).name;
+        }
+        return towerName != String.Empty ? true : false;
     }
-    public bool TryGetTowerInfoByName(string towerName, out TowerInfo towerInfo)
+
+    public bool TryGetTowerByName(string towerName, out Tower tower)
     {
-        towerInfo = towers.Find(x => x.name == towerName).GetComponent<TowerInfo>(); towers.Find(x => x.name == towerName).GetComponent<TowerInfo>();
-        return towerInfo != null ? true : false;
+        tower = towers.Find(x => x.name == towerName).GetComponent<Tower>();
+        return tower != null ? true : false;
     }
 }
