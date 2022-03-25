@@ -13,11 +13,14 @@ public class EnemySpawner : MonoBehaviour
         public bool done;
     }
     float[] spawnTimer;
+    int[] spawnCounts;
+
     Transform tr;
     private void Awake()
     {
         tr = transform;
         spawnTimer = new float[spawnElements.Length];
+        spawnCounts = new int[spawnElements.Length];
         for (int i = 0; i< spawnElements.Length; i++)
         {
             spawnTimer[i] = spawnElements[i].spawnTimeGap;
@@ -30,7 +33,7 @@ public class EnemySpawner : MonoBehaviour
         {
             string tmpTag = spawnElements[i].PoolElement.tag;
             int num = ObjectPool.GetSpawnedObjectNumber(tmpTag);
-            if (spawnElements[i].done == false)
+            if (spawnCounts[i] < spawnElements[i].PoolElement.size)
             {
                 if (num < spawnElements[i].PoolElement.size)
                 {
@@ -38,6 +41,7 @@ public class EnemySpawner : MonoBehaviour
                     {
                         Spawn(tmpTag);
                         spawnTimer[i] = spawnElements[i].spawnTimeGap;
+                        spawnCounts[i]++;
                     }
                     else
                         spawnTimer[i] -= Time.deltaTime;

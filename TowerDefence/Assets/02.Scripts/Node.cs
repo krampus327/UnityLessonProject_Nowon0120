@@ -81,6 +81,9 @@ public class Node : MonoBehaviour
         {
             tower.gameObject.SetActive(false);
         }
+
+        Debug.Log($"build tower {towerName}here");
+
         GameObject towerGameObject = ObjectPool.SpawnFromPool(towerName,
                                          transform.position + new Vector3(0, col.size.y / 2, 0));
 
