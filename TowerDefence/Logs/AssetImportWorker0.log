@@ -1517,3 +1517,4 @@ Received Import Request.
 Start importing Assets/02.Scripts/Towers/Tower_Rockat.cs using Guid(c67b16d848bb6d94783230b6c8a80cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '470248ea4ef6e9a732299895f5731716') in 0.003771 seconds 
   Import took 0.005842 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

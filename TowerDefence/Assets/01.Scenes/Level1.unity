@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &46343645
 BoxCollider:
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &61495382
 BoxCollider:
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &66972110
 BoxCollider:
@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &89793181
 BoxCollider:
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &98181304
 BoxCollider:
@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &113344566
 BoxCollider:
@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &158133891
 BoxCollider:
@@ -1354,7 +1354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &173329500
 BoxCollider:
@@ -1465,7 +1465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &186624698
 BoxCollider:
@@ -1576,7 +1576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &190836005
 BoxCollider:
@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.0075297356, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &211527316
 GameObject:
@@ -1798,7 +1798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &211527319
 BoxCollider:
@@ -2004,7 +2004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &263426036
 BoxCollider:
@@ -2177,7 +2177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.20307422, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &295707152
 GameObject:
@@ -2541,7 +2541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &347797338
 BoxCollider:
@@ -2876,7 +2876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &375735558
 BoxCollider:
@@ -3049,7 +3049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.14507627, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &394855500
 GameObject:
@@ -3350,7 +3350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0.043704987, g: 1, b: 0, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &417716624
 GameObject:
@@ -3399,7 +3399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &417716627
 BoxCollider:
@@ -3510,7 +3510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &436339341
 BoxCollider:
@@ -3621,7 +3621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &449295823
 BoxCollider:
@@ -3762,7 +3762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &456999278
 BoxCollider:
@@ -4163,7 +4163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &504452225
 BoxCollider:
@@ -4336,7 +4336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.029511452, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &528175037
 GameObject:
@@ -4480,7 +4480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &545472101
 BoxCollider:
@@ -4686,7 +4686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &566205776
 BoxCollider:
@@ -4859,7 +4859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.14361954, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &580706740
 GameObject:
@@ -4970,7 +4970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.11449838, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &582071231
 GameObject:
@@ -5019,7 +5019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &582071234
 BoxCollider:
@@ -5130,7 +5130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &585360980
 BoxCollider:
@@ -5336,7 +5336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &605390948
 BoxCollider:
@@ -5744,7 +5744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &639800249
 BoxCollider:
@@ -6013,7 +6013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.029161692, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!114 &651503695
 MonoBehaviour:
@@ -6074,7 +6074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &652908345
 BoxCollider:
@@ -6730,7 +6730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &771971510
 BoxCollider:
@@ -6967,7 +6967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &782334468
 BoxCollider:
@@ -7140,7 +7140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.07796383, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &837481787
 GameObject:
@@ -7379,7 +7379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &844963868
 BoxCollider:
@@ -7490,7 +7490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &849173878
 BoxCollider:
@@ -7886,7 +7886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &867011201
 BoxCollider:
@@ -7997,7 +7997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &868131457
 BoxCollider:
@@ -8220,7 +8220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &917484370
 BoxCollider:
@@ -8604,7 +8604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1033014982
 BoxCollider:
@@ -8889,7 +8889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1078260998
 BoxCollider:
@@ -9000,7 +9000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1085306723
 BoxCollider:
@@ -9111,7 +9111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1103658848
 BoxCollider:
@@ -9284,7 +9284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0.04401779, g: 1, b: 0, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1113040123
 GameObject:
@@ -9556,7 +9556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0.035793543, g: 1, b: 0, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1133201779
 GameObject:
@@ -9667,7 +9667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.04147792, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1172569714
 GameObject:
@@ -9903,7 +9903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.120423555, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1216307041
 GameObject:
@@ -10014,7 +10014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.12923098, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1233521688
 GameObject:
@@ -10093,7 +10093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1250979280
 BoxCollider:
@@ -10299,7 +10299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1258968765
 BoxCollider:
@@ -10505,7 +10505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1294456889
 BoxCollider:
@@ -10711,7 +10711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1336277384
 BoxCollider:
@@ -10884,7 +10884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.19833946, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1355824950
 GameObject:
@@ -11012,7 +11012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1373714329
 BoxCollider:
@@ -11185,7 +11185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.010046244, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1386029630
 GameObject:
@@ -11296,7 +11296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.018627405, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1388916613
 GameObject:
@@ -11345,7 +11345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1388916616
 BoxCollider:
@@ -11456,7 +11456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1403285489
 BoxCollider:
@@ -11629,7 +11629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.04619026, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1409969425
 GameObject:
@@ -11678,7 +11678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1409969428
 BoxCollider:
@@ -11946,7 +11946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.13331223, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1429588322
 GameObject:
@@ -11995,7 +11995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1429588325
 BoxCollider:
@@ -12106,7 +12106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1433788574
 BoxCollider:
@@ -12217,7 +12217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1440440810
 BoxCollider:
@@ -12328,7 +12328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1456942397
 BoxCollider:
@@ -12613,7 +12613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1530347019
 BoxCollider:
@@ -12786,7 +12786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.11269832, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1550031554
 GameObject:
@@ -12980,7 +12980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1561928461
 BoxCollider:
@@ -13576,7 +13576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1634650976
 BoxCollider:
@@ -13844,7 +13844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.073209524, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1662630400
 GameObject:
@@ -13988,7 +13988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1668735951
 BoxCollider:
@@ -14384,7 +14384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1726381234
 BoxCollider:
@@ -14761,7 +14761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.09286618, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1814838395
 GameObject:
@@ -14905,7 +14905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1830314502
 BoxCollider:
@@ -15016,7 +15016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1841492202
 BoxCollider:
@@ -15187,7 +15187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1860447924
 BoxCollider:
@@ -15393,7 +15393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1881960129
 BoxCollider:
@@ -15566,7 +15566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0.018116832, g: 1, b: 0, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1900273321
 GameObject:
@@ -15985,7 +15985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.10012627, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1924112322
 GameObject:
@@ -16034,7 +16034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1924112325
 BoxCollider:
@@ -16207,7 +16207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1946978135
 GameObject:
@@ -16318,7 +16318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.041554213, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1947810066
 GameObject:
@@ -16462,7 +16462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1952489989
 BoxCollider:
@@ -16573,7 +16573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1959862574
 BoxCollider:
@@ -16684,7 +16684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1961171131
 BoxCollider:
@@ -16925,7 +16925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &1997253892
 BoxCollider:
@@ -17036,7 +17036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &2005290172
 BoxCollider:
@@ -17147,7 +17147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &2045926085
 BoxCollider:
@@ -17337,7 +17337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &2072243367
 BoxCollider:
@@ -17591,7 +17591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &2113542675
 BoxCollider:
@@ -17702,7 +17702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &2134302101
 BoxCollider:
@@ -17813,7 +17813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &2139795365
 BoxCollider:
@@ -17924,7 +17924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
-  buildAvailableColor: {r: 0, g: 1, b: 0.060203552, a: 0}
+  buildAvailableColor: {r: 1, g: 1, b: 1, a: 1}
   buildNotAvailableColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!65 &2142824572
 BoxCollider:
