@@ -202,6 +202,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &2361877587948957816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2427304622604989978}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2427304622604989978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2361877587948957816}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.4350071, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5519657254335192188}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4661822859068188816
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,8 +241,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5519657254335192188}
-  - component: {fileID: 1591248420802015480}
-  m_Layer: 0
+  - component: {fileID: -9165540616229997833}
+  m_Layer: 15
   m_Name: Rocket1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,15 +257,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4661822859068188816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.18500704, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 845296793410609291}
   - {fileID: 1338483946560610609}
+  - {fileID: 2427304622604989978}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1591248420802015480
+--- !u!114 &-9165540616229997833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,7 +275,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4661822859068188816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4466e10cd075b514cb29901ab724e0f8, type: 3}
+  m_Script: {fileID: 11500000, guid: c67b16d848bb6d94783230b6c8a80cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: b2b26b26b5a5cd14db2b8b8efe332b11, type: 2}
@@ -252,4 +283,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1048576
   detectRange: 2
-  turretRotatePoint: {fileID: 1338483946560610609}
+  turretRotatePoint: {fileID: 0}
+  Target: {fileID: 0}
+  RocketPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
+  damage: 10
+  reloadTime: 1
