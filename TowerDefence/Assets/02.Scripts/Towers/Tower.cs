@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-
 public class Tower : MonoBehaviour
 {
     public TowerInfo info;
@@ -10,9 +9,8 @@ public class Tower : MonoBehaviour
     public float detectRange;
 
     public Transform turretRotatePoint;
-    public Transform Target;
+    public Transform target;
     Transform tr;
-
     private void Awake()
     {
         tr = GetComponent<Transform>();
@@ -25,13 +23,14 @@ public class Tower : MonoBehaviour
     public virtual void Update()
     {
         Collider[] cols = Physics.OverlapSphere(tr.position, detectRange, enemyLayer);
+
         if (cols.Length > 0)
         {
-            cols.OrderBy(x => (x.transform.position - WayPoints.points.Last().transform.position));
-            Target = cols[0].transform;
-            turretRotatePoint.LookAt(Target);
+            cols.OrderBy(x => (x.transform.position - WayPoints.points.Last().transform.position).magnitude);
+            target = cols[0].transform;
+            turretRotatePoint.LookAt(target);
         }
         else
-            Target = null;
+            target = null;
     }
 }

@@ -346,8 +346,12 @@ MonoBehaviour:
     m_Bits: 1048576
   detectRange: 3
   turretRotatePoint: {fileID: 8507145578442829056}
-  Target: {fileID: 0}
-  RocketPrefab: {fileID: 3651108617625426461, guid: 10470eb60d908c74183ff8a53b8a8eba, type: 3}
-  firePoint: {fileID: 6892844484292387672}
-  damage: 0
-  reloadTime: 0
+  target: {fileID: 0}
+  rocketPrefab: {fileID: 6266692317985163366, guid: 10470eb60d908c74183ff8a53b8a8eba, type: 3}
+  firePoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  damage: 30
+  reloadTime: 2
+  reloadTimer: 0

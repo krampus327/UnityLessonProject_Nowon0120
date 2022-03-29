@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2150151408955371568}
-  - component: {fileID: 4113795799775268707}
+  - component: {fileID: 917486835608203424}
   m_Layer: 15
   m_Name: Laser2
   m_TagString: Untagged
@@ -65,7 +65,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4113795799775268707
+--- !u!114 &917486835608203424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,16 +74,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7794220722252673050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4466e10cd075b514cb29901ab724e0f8, type: 3}
+  m_Script: {fileID: 11500000, guid: f51adc7fc53203442b04b89c1142b6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: e30f57d072253804c99a241a3c38f8ba, type: 2}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 1048576
-  detectRange: 2
+  detectRange: 4
   turretRotatePoint: {fileID: 3850952709669253128}
-  Target: {fileID: 0}
+  target: {fileID: 0}
+  lineRenderer: {fileID: 4445636603229702057}
+  firePoint: {fileID: 6884643631502239196}
+  hitEffect: {fileID: 8144227888674804620}
 --- !u!1001 &141634459313626118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270,6 +273,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2745193443473149169, guid: f47860239d3dc1b479abc2d8477e9f61, type: 3}
   m_PrefabInstance: {fileID: 5537785680325185606}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &8144227888674804620 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4457497797319295946, guid: f47860239d3dc1b479abc2d8477e9f61, type: 3}
+  m_PrefabInstance: {fileID: 5537785680325185606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5571407856463142139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -279,7 +287,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3436819484978445360, guid: 389fe571378262640836d2e4e58e8391, type: 3}
       propertyPath: m_Name
-      value: LaserBeam
+      value: LaserBeam2
       objectReference: {fileID: 0}
     - target: {fileID: 6522220120941954307, guid: 389fe571378262640836d2e4e58e8391, type: 3}
       propertyPath: m_RootOrder
@@ -334,5 +342,10 @@ PrefabInstance:
 --- !u!4 &1716444619415804408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6522220120941954307, guid: 389fe571378262640836d2e4e58e8391, type: 3}
+  m_PrefabInstance: {fileID: 5571407856463142139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!120 &4445636603229702057 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 8134502592873323346, guid: 389fe571378262640836d2e4e58e8391, type: 3}
   m_PrefabInstance: {fileID: 5571407856463142139}
   m_PrefabAsset: {fileID: 0}

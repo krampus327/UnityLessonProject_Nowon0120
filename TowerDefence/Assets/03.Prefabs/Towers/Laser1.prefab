@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8317505182514118332}
-  - component: {fileID: 1403949040193057815}
+  - component: {fileID: -2357786716620392046}
   m_Layer: 15
   m_Name: Laser1
   m_TagString: Untagged
@@ -65,7 +65,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1403949040193057815
+--- !u!114 &-2357786716620392046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,16 +74,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3702981354312605726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4466e10cd075b514cb29901ab724e0f8, type: 3}
+  m_Script: {fileID: 11500000, guid: f51adc7fc53203442b04b89c1142b6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: 0beb2bc50e9c60049be9c229e03ea2af, type: 2}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 1048576
-  detectRange: 2
+  detectRange: 4
   turretRotatePoint: {fileID: 8766139262864436970}
-  Target: {fileID: 0}
+  target: {fileID: 0}
+  lineRenderer: {fileID: 4080041228288200379}
+  firePoint: {fileID: 8093840437406113291}
+  hitEffect: {fileID: 4457497797319295946, guid: f47860239d3dc1b479abc2d8477e9f61, type: 3}
 --- !u!1001 &4302230354188940570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -155,7 +158,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3436819484978445360, guid: 389fe571378262640836d2e4e58e8391, type: 3}
       propertyPath: m_Name
-      value: LaserBeam
+      value: LaserBeam1
       objectReference: {fileID: 0}
     - target: {fileID: 6522220120941954307, guid: 389fe571378262640836d2e4e58e8391, type: 3}
       propertyPath: m_RootOrder
@@ -210,6 +213,11 @@ PrefabInstance:
 --- !u!4 &1368861495701721322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6522220120941954307, guid: 389fe571378262640836d2e4e58e8391, type: 3}
+  m_PrefabInstance: {fileID: 5223252956457227753}
+  m_PrefabAsset: {fileID: 0}
+--- !u!120 &4080041228288200379 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 8134502592873323346, guid: 389fe571378262640836d2e4e58e8391, type: 3}
   m_PrefabInstance: {fileID: 5223252956457227753}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6398535874341352796

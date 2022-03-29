@@ -130,7 +130,8 @@ Transform:
   m_LocalRotation: {x: 0.0031379692, y: 0.0064551267, z: -0.0012619374, w: 0.9999735}
   m_LocalPosition: {x: 0.00031098948, y: 0.8368692, z: -0.00053860055}
   m_LocalScale: {x: 2.2263768, y: 2.2263768, z: 2.2263768}
-  m_Children: []
+  m_Children:
+  - {fileID: 2427304622604989978}
   m_Father: {fileID: 5519657254335192188}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -161,7 +162,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 24070de2e93172044af3dd258da78a6c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -225,12 +226,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2361877587948957816}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.4350071, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.0031379692, y: -0.0064551267, z: 0.0012619374, w: 0.9999735}
+  m_LocalPosition: {x: -0.0008099588, y: 0.26865482, z: -0.0014503337}
+  m_LocalScale: {x: 0.44916028, y: 0.44916028, z: 0.44916028}
   m_Children: []
-  m_Father: {fileID: 5519657254335192188}
-  m_RootOrder: 2
+  m_Father: {fileID: 1338483946560610609}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4661822859068188816
 GameObject:
@@ -262,7 +263,6 @@ Transform:
   m_Children:
   - {fileID: 845296793410609291}
   - {fileID: 1338483946560610609}
-  - {fileID: 2427304622604989978}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -282,10 +282,12 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 1048576
-  detectRange: 2
-  turretRotatePoint: {fileID: 0}
-  Target: {fileID: 0}
-  RocketPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
-  damage: 10
+  detectRange: 3
+  turretRotatePoint: {fileID: 1338483946560610609}
+  target: {fileID: 0}
+  rocketPrefab: {fileID: 6266692317985163366, guid: 10470eb60d908c74183ff8a53b8a8eba, type: 3}
+  firePoints:
+  - {fileID: 0}
+  damage: 20
   reloadTime: 1
+  reloadTimer: 0

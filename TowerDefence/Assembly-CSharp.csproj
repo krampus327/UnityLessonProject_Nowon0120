@@ -53,10 +53,10 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\02.Scripts\Tower_Rockat.cs" />
+    <Compile Include="Assets\02.Scripts\Towers\Tower_Rocket.cs" />
     <Compile Include="Assets\02.Scripts\Towers\Tower_MachineGun.cs" />
-    <Compile Include="Assets\02.Scripts\TowerAssets.cs" />
-    <Compile Include="Assets\02.Scripts\TowerPreview.cs" />
+    <Compile Include="Assets\02.Scripts\Towers\TowerAssets.cs" />
+    <Compile Include="Assets\02.Scripts\Towers\TowerPreview.cs" />
     <Compile Include="Assets\02.Scripts\TowerHandler.cs" />
     <Compile Include="Assets\02.Scripts\EnemyMove.cs" />
     <Compile Include="Assets\02.Scripts\Enemy.cs" />
@@ -68,11 +68,14 @@
     <Compile Include="Assets\02.Scripts\Player.cs" />
     <Compile Include="Assets\02.Scripts\GameManager.cs" />
     <Compile Include="Assets\02.Scripts\Towers\Tower.cs" />
+    <Compile Include="Assets\02.Scripts\Towers\Tower_Laser.cs" />
     <Compile Include="Assets\02.Scripts\ObjectPool.cs" />
     <Compile Include="Assets\02.Scripts\TowerViewPresenter.cs" />
-    <Compile Include="Assets\02.Scripts\Rockat.cs" />
+    <Compile Include="Assets\02.Scripts\Towers\Rocket.cs" />
     <Compile Include="Assets\02.Scripts\EnemySpawner.cs" />
-    <Compile Include="Assets\02.Scripts\Towers\Tower_Laser.cs" />
+    <Compile Include="Assets\02.Scripts\Buff\Buff.cs" />
+    <Compile Include="Assets\02.Scripts\Buff\BuffManager.cs" />
+    <Compile Include="Assets\02.Scripts\Buff\Buff_Slow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -12,7 +12,7 @@ public class Tower_MachineGun : Tower
         base.Update();
         if (reloadTimer < 0)
         {
-            if (Target != null)
+            if (target != null)
             {
                 Attack();
                 reloadTimer = reloadTime;
@@ -23,6 +23,6 @@ public class Tower_MachineGun : Tower
     }
     private void Attack()
     {
-        Target.GetComponent<Enemy>().hp -= damage;
+        target.GetComponent<Enemy>().hp -= damage;
     }
 }
