@@ -53,14 +53,14 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\02.Script\GameManager.cs" />
-    <Compile Include="Assets\02.Script\MapSpawner.cs" />
-    <Compile Include="Assets\02.Script\PlayerStateMachine.cs" />
-    <Compile Include="Assets\02.Script\Player.cs" />
-    <Compile Include="Assets\02.Script\PlayerStateMachineManager.cs" />
-    <Compile Include="Assets\02.Script\GroundDetecter.cs" />
-    <Compile Include="Assets\02.Script\WallDetector.cs" />
-    <Compile Include="Assets\02.Script\SpawnMapTrigger.cs" />
+    <Compile Include="Assets\02.Scripts\GameManager.cs" />
+    <Compile Include="Assets\02.Scripts\MapSpawner.cs" />
+    <Compile Include="Assets\02.Scripts\PlayerStateMachine.cs" />
+    <Compile Include="Assets\02.Scripts\Player.cs" />
+    <Compile Include="Assets\02.Scripts\WallDetector.cs" />
+    <Compile Include="Assets\02.Scripts\PlayerStateMachineManager.cs" />
+    <Compile Include="Assets\02.Scripts\SpawnMapTrigger.cs" />
+    <Compile Include="Assets\02.Scripts\GroundDetector.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
