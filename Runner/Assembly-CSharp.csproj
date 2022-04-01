@@ -61,6 +61,9 @@
     <Compile Include="Assets\02.Scripts\PlayerStateMachineManager.cs" />
     <Compile Include="Assets\02.Scripts\SpawnMapTrigger.cs" />
     <Compile Include="Assets\02.Scripts\GroundDetector.cs" />
+    <Compile Include="Assets\02.Scripts\playerStateMachine_Idle.cs" />
+    <Compile Include="Assets\02.Scripts\playerStateMachine_Jump.cs" />
+    <Compile Include="Assets\02.Scripts\playerStateMachine_Run.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
