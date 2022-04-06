@@ -13,7 +13,6 @@ public class PlayerStateMachine_Jump : PlayerStateMachine
         base.Awake();
         groundDetector = GetComponent<GroundDetector>();
         rb = GetComponent<Rigidbody>();
-        keyCode = KeyCode.LeftAlt;
     }
 
     public override bool IsExecuteOK()
@@ -36,6 +35,7 @@ public class PlayerStateMachine_Jump : PlayerStateMachine
             case State.Idle:
                 break;
             case State.Prepare:
+                animator.Play("Jump");
                 rb.velocity = new Vector3(rb.velocity.x,
                                           0,
                                           rb.velocity.z);

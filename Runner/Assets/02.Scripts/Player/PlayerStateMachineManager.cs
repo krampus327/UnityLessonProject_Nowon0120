@@ -11,6 +11,11 @@ public class PlayerStateMachineManager : MonoBehaviour
     private void Awake()
     {
         playerStateMachines = GetComponents<PlayerStateMachine>();
+        foreach (var playerStateMachine in playerStateMachines)
+        {
+            if (playerStateMachine.playerState == PlayerState.Idle)
+                currentMachine = playerStateMachine;
+        }   
     }
 
     private void Update()
@@ -28,7 +33,8 @@ public class PlayerStateMachineManager : MonoBehaviour
     {
         foreach (var machine in playerStateMachines)
         {
-            if (keyInput == machine.keyCode)
+            if (keyInput != KeyCode.None &&
+                keyInput == machine.keyCode)
             {
                 if (machine.IsExecuteOK())
                 {
@@ -59,15 +65,17 @@ public class PlayerStateMachineManager : MonoBehaviour
     }
 
     private void TryExecuteMachine(PlayerState newState)
-    {        
+    {
         foreach (var machine in playerStateMachines)
         {
             // 해당 상태 머신이 있는지 체크 &&
             // 해당 상태 머신이 실행가능한지 체크
+            Debug.Log($"{machine.playerState} , {machine.IsExecuteOK()}" );
             if (machine.playerState == newState &&
                machine.IsExecuteOK())
             {
                 // 실행
+                currentMachine.ForceStop();
                 machine.Execute();
                 currentMachine = machine;
                 state = machine.playerState;
