@@ -1,0 +1,4 @@
+현재 MapSpawner가 맵 생성시
+ObjectPool에서 가져다가 쓰고
+SpawnMapTrigger가 트리거 됐을때 자기자신 파괴하는 대신에
+ObjectPool로 부모 게임오브젝트 되돌리기
