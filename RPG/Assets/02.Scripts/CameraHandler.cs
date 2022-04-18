@@ -12,16 +12,19 @@ public class CameraHandler : MonoBehaviour
     [SerializeField] private float yPointSpeed = 500; // 마우스 y 이동속도
     private float yMinLimit = 5;
     private float yMaxLimit = 80;
-    private float x, y; // 마우스 위치(회전)
-    private float distance; // 카메라와 타겟간 거리
+    private float x, y; // 마우스 위치 ( 회전 )
+    private float distance; // 카메라와 타겟간거리
     private Transform tr;
     private void Awake()
     {
         tr = GetComponent<Transform>();
         distance = Vector3.Distance(tr.position, target.position);
         x = tr.eulerAngles.y;
-        y = tr.eulerAngles.x;
+        y = -tr.eulerAngles.x;
+
+        Cursor.visible = false;
     }
+
     private void Update()
     {
         if (target == null) return;
@@ -29,11 +32,11 @@ public class CameraHandler : MonoBehaviour
         // 마우스 좌우입력
         x += Input.GetAxis("Mouse X") * xPointSpeed * Time.deltaTime;
         // 마우스 상하입력
-        y += Input.GetAxis("Mouse Y") * yPointSpeed * Time.deltaTime;
-        ClampAngle(y, yMinLimit, yMaxLimit);
+        y -= Input.GetAxis("Mouse Y") * yPointSpeed * Time.deltaTime;
+        ClampAngle(y, -yMinLimit, -yMaxLimit);
 
-        // 마우스 좌우입력으로 y축 회전
-        // 마우스 상하입력으로 x축 회전
+        // 마우스 좌우입력으로 y 축 회전, 
+        // 마우스 상하입력으로 x 축 회전
         tr.rotation = Quaternion.Euler(y, x, 0);
 
         distance -= Input.GetAxis("Mouse ScrollWheel") * wheelSpeed * Time.deltaTime;

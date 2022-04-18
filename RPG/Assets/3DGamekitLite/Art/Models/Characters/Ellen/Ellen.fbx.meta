@@ -2707,7 +2707,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 1
+    optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -2722,7 +2722,11 @@ ModelImporter:
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
-    extraExposedTransformPaths: []
+    extraExposedTransformPaths:
+    - Ellen_Skeleton/Ellen_Root/Ellen_Hips/Ellen_Spine/Ellen_Chest/Ellen_UpperChest/Ellen_Right_Shoulder/Ellen_Right_UpperArm/Ellen_Right_Arm/Ellen_Right_Hand
+    - Ellen_Skeleton/Ellen_Root/Ellen_Hips/Ellen_Spine/Ellen_Chest/Ellen_UpperChest/Ellen_Left_Shoulder/Ellen_Left_UpperArm/Ellen_Left_Arm/Ellen_Left_Hand
+    - Ellen_Skeleton/Ellen_Root/Ellen_Hips/Ellen_Spine/Ellen_Chest/Ellen_UpperChest/Ellen_Right_Shoulder
+    - Ellen_Skeleton/Ellen_Root/Ellen_Hips/Ellen_Spine/Ellen_Chest/Ellen_UpperChest/Ellen_Left_Shoulder
     extraUserProperties: []
     clipAnimations: []
     isReadable: 1
