@@ -506,6 +506,7 @@ GameObject:
   - component: {fileID: 1727405668}
   - component: {fileID: 8387980544708803507}
   - component: {fileID: 1727405667}
+  - component: {fileID: 8387980544708803508}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -526,6 +527,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 963194228}
+--- !u!114 &8387980544708803508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8387980544708803506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f531da2b98a8f48be9bc2c5d931544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8387980544709158866
 Transform:
   m_ObjectHideFlags: 0
@@ -556,7 +569,14 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Ellen_Chest'\n\tTransform 'Ellen_Root'\n\tTransform
+    'Ellen_Spine'\n\tTransform 'Ellen_Jaw'\n\tTransform 'Ellen_UpperChest'\n\tTransform
+    'Ellen_Hips'\n\tTransform 'Ellen_Left_Toes'\n\tTransform 'Ellen_Left_Arm'\n\tTransform
+    'Ellen_Left_IndexIntermediate'\n\tTransform 'Ellen_Left_UpperLeg'\n\tand more
+    ...\n\tFrom animation clip 'Ellen_Run_Forward_45_Left'\n\tFrom animation clip
+    'Ellen_Walk_Forward'\n\tFrom animation clip 'Ellen_Run_Forward'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
