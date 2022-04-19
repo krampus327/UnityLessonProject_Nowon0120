@@ -4,49 +4,69 @@ using UnityEngine;
 
 public class PlayerStateMachine : MonoBehaviour
 {
-    public State state;
     public PlayerState playerState;
+    public State state;
     [HideInInspector] public PlayerStateMachineManager manager;
     [HideInInspector] public PlayerAnimator playerAnimator;
+    [HideInInspector] public CharacterController controller;
 
+
+    public bool isFinish
+    {
+        get
+        {
+            return state == State.Finish ? true : false;
+        }
+    }
     public virtual void Awake()
     {
         manager = GetComponent<PlayerStateMachineManager>();
-
+        playerAnimator = GetComponent<PlayerAnimator>();
+        controller = GetComponent<CharacterController>();
     }
+
     public virtual bool IsExecuteOK()
     {
-        state = State.Prepare;
+        return true;
     }
 
-    public virtual void Excute()
+    public virtual void Execute()
     {
         state = State.Prepare;
     }
 
     public virtual PlayerState Workflow()
     {
-        PlayerStateMachine nextState = PlayerState;
+        PlayerState nextState = playerState;
 
-        switch(state)
+        switch (state)
         {
             case State.Idle:
                 break;
             case State.Prepare:
+                state++;
                 break;
             case State.Casting:
+                state++;
                 break;
             case State.OnAction:
+                state++;
                 break;
             case State.Finish:
                 break;
-            default;
+            default:
                 break;
         }
+
         return nextState;
     }
 
-    enum State
+    public virtual void ForceStop()
+    {
+
+    }
+
+    public enum State
     {
         Idle,
         Prepare,

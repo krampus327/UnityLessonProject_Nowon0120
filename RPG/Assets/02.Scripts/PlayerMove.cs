@@ -19,18 +19,21 @@ public class PlayerMove : MonoBehaviour
         characterController.Move(_move * Time.deltaTime);
     }
 
-    public void SetMove(float y)
-    {
-
-    }
     public void SetMove(float x, float z)
     {
-        _move = new Vector3();
         _move.x = x * moveSpeed;
         _move.z = z * moveSpeed;
     }
+
+    public void SetMove(float y)
+    {
+        _move.y = y;
+    }
+
     public void SetMove(Vector3 move)
     {
-        _move = new Vector3(move.x * moveSpeed, _move.y, move.z * moveSpeed);
+        _move = new Vector3(move.x * moveSpeed,
+                            move.y,
+                            move.z * moveSpeed);
     }
 }

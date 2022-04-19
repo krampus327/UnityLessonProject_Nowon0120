@@ -23,6 +23,7 @@ public class CameraHandler : MonoBehaviour
         y = -tr.eulerAngles.x;
 
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
