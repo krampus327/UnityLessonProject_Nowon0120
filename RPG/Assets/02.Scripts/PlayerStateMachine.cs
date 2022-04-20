@@ -10,7 +10,6 @@ public class PlayerStateMachine : MonoBehaviour
     [HideInInspector] public PlayerAnimator playerAnimator;
     [HideInInspector] public CharacterController controller;
 
-
     public bool isFinish
     {
         get
@@ -18,6 +17,8 @@ public class PlayerStateMachine : MonoBehaviour
             return state == State.Finish ? true : false;
         }
     }
+
+
     public virtual void Awake()
     {
         manager = GetComponent<PlayerStateMachineManager>();
@@ -63,7 +64,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     public virtual void ForceStop()
     {
-
+        state = State.Idle;
     }
 
     public enum State

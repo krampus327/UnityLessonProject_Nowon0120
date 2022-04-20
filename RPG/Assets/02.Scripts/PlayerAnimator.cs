@@ -23,23 +23,43 @@ public class PlayerAnimator : MonoBehaviour
     public void SetFloat(string name, float value) =>
         animator.SetFloat(name, value);
 
+    public void SetInt(string name, int value) =>
+        animator.SetInteger(name, value);
+
+    public void GetInt(string name, int value) =>
+        animator.GetInteger(name, value);
+
     public void SetBool(string name, bool value) =>
         animator.SetBool(name, value);
+
     public void Play(string name) =>
         animator.Play(name);
 
     public bool IsClipPlaying(string name)
     {
         var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        if(stateInfo.IsName(name))
+        if (stateInfo.IsName(name))
             return true;
         return false;
     }
 
-    public float GetClipTime(string name) =>
-        RuntimeAnimatorController ac = animator.runtimeAnimatorController;
-        for(int i = 0;  )
+    public float GetClipTime(string name)
     {
-          
+        
+
+        Debug.Log($"Try to get clip time of {name}");        
+        RuntimeAnimatorController ac = animator.runtimeAnimatorController;
+        
+        for (int i = 0; i < ac.animationClips.Length; i++)
+        {
+            Debug.Log($"Clip name : {ac.animationClips[i].name}");
+            if (ac.animationClips[i].name == name)
+            {
+                Debug.Log($"Suceed to get clip time of {name}");
+                return ac.animationClips[i].length;
+            }
+             
+        }
+        return -1.0f;
     }
 }

@@ -23,8 +23,9 @@ public class PlayerStateMachineManager : MonoBehaviour
         playerAnimator = GetComponent<PlayerAnimator>();
         characterController = GetComponent<CharacterController>();
         machines = GetComponents<PlayerStateMachine>();
-        currentMachine = machines[0];
+        currentMachine = machines[0];        
     }
+
 
     private void Update()
     {
@@ -45,7 +46,8 @@ public class PlayerStateMachineManager : MonoBehaviour
 
         // Attack
         if (Input.GetMouseButton(0))
-            if(currentMachine.playerState == PlayerState.Attack &&
+        {
+            if (currentMachine.playerState == PlayerState.Attack &&
                 currentMachine.isFinish &&
                 playerAnimator.GetBool("attackComboOn"))
             {
@@ -54,23 +56,26 @@ public class PlayerStateMachineManager : MonoBehaviour
             }
 
             ChangePlayerState(PlayerState.Attack);
+        }
             
-        
+
         UpdatePlayerState();
     }
+
     private void UpdatePlayerState()
     {
         if (currentMachine != null)
-            ChangePlayerState(currentMachine.Workflow());
+            ChangePlayerState(currentMachine.Workflow()); 
     }
+
     public void ChangePlayerState(PlayerState newState)
     {
         if (playerState == newState) return;
 
-        //바꾸려는 머신 검색
-        foreach(var sub in machines)
+        // 바꾸려는 머신 검색
+        foreach (var sub in machines)
         {
-            if(sub.playerState == newState &&
+            if (sub.playerState == newState &&
                 sub.IsExecuteOK()) // 변경하려는 머신 실행가능하면
             {
                 currentMachine.ForceStop(); // 현재 돌아가는 머신 중단
@@ -81,6 +86,7 @@ public class PlayerStateMachineManager : MonoBehaviour
             }
         }
     }
+
 }
 
 public enum PlayerState

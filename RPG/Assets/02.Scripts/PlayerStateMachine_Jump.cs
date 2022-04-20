@@ -15,7 +15,6 @@ public class PlayerStateMachine_Jump : PlayerStateMachine
     public override void Awake()
     {
         base.Awake();
-        controller = GetComponent<CharacterController>();
         playerMove = GetComponent<PlayerMove>();
     }
 
@@ -23,7 +22,7 @@ public class PlayerStateMachine_Jump : PlayerStateMachine
     {
         if ((manager.playerState == PlayerState.Idle ||
              manager.playerState == PlayerState.Move) &&
-             controller.isGrounded && 
+             controller.isGrounded &&
              playerAnimator.IsClipPlaying("Movement"))
             return true;
         return false;
@@ -56,9 +55,10 @@ public class PlayerStateMachine_Jump : PlayerStateMachine
             case State.OnAction:
                 if (controller.velocity.y < 0)
                     playerAnimator.SetTrigger("doFall");
-                if (controller.isGrounded && playerAnimator.IsClipPlaying("Jump_Down"))
+                if (controller.isGrounded &&
+                    playerAnimator.IsClipPlaying("Jump_Down"))
                     state++;
-
+                    
 
                 if (jumpUpTimer > 0)
                 {

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerStateMachine_Move : PlayerStateMachine
 {
+
     public override bool IsExecuteOK()
     {
-        if(controller.isGrounded)
+        if (controller.isGrounded)
             return true;
         return false;
     }
@@ -14,6 +15,7 @@ public class PlayerStateMachine_Move : PlayerStateMachine
     public override PlayerState Workflow()
     {
         PlayerState nextState = playerState;
+
         switch (state)
         {
             case State.Idle:
@@ -32,8 +34,9 @@ public class PlayerStateMachine_Move : PlayerStateMachine
                 break;
             default:
                 break;
-
         }
+
         return nextState;
     }
+
 }
