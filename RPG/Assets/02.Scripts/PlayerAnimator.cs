@@ -17,6 +17,9 @@ public class PlayerAnimator : MonoBehaviour
     public float GetFloat(string name) =>
         animator.GetFloat(name);
 
+    public int GetInt(string name) =>
+        animator.GetInteger(name);
+
     public void SetTrigger(string name) =>
         animator.SetTrigger(name);
     
@@ -25,9 +28,6 @@ public class PlayerAnimator : MonoBehaviour
 
     public void SetInt(string name, int value) =>
         animator.SetInteger(name, value);
-
-    public void GetInt(string name, int value) =>
-        animator.GetInteger(name, value);
 
     public void SetBool(string name, bool value) =>
         animator.SetBool(name, value);
@@ -45,20 +45,11 @@ public class PlayerAnimator : MonoBehaviour
 
     public float GetClipTime(string name)
     {
-        
-
-        Debug.Log($"Try to get clip time of {name}");        
         RuntimeAnimatorController ac = animator.runtimeAnimatorController;
-        
         for (int i = 0; i < ac.animationClips.Length; i++)
         {
-            Debug.Log($"Clip name : {ac.animationClips[i].name}");
             if (ac.animationClips[i].name == name)
-            {
-                Debug.Log($"Suceed to get clip time of {name}");
                 return ac.animationClips[i].length;
-            }
-             
         }
         return -1.0f;
     }

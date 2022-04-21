@@ -504,9 +504,9 @@ GameObject:
   - component: {fileID: 8387980544709158866}
   - component: {fileID: 8387980544718145940}
   - component: {fileID: 1727405668}
-  - component: {fileID: 8387980544708803509}
   - component: {fileID: 8387980544708803507}
   - component: {fileID: 1727405667}
+  - component: {fileID: 8387980544708803509}
   - component: {fileID: 8387980544708803510}
   - component: {fileID: 8387980544708803508}
   - component: {fileID: 8387980544708803511}

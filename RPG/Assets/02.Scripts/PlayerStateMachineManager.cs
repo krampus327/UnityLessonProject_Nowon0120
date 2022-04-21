@@ -47,15 +47,8 @@ public class PlayerStateMachineManager : MonoBehaviour
         // Attack
         if (Input.GetMouseButton(0))
         {
-            if (currentMachine.playerState == PlayerState.Attack &&
-                currentMachine.isFinish &&
-                playerAnimator.GetBool("attackComboOn"))
-            {
-                currentMachine.ForceStop();
-                currentMachine.Execute();
-            }
-
             ChangePlayerState(PlayerState.Attack);
+
         }
             
 
