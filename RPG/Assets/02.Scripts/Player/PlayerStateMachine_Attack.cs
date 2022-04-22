@@ -22,8 +22,8 @@ public class PlayerStateMachine_Attack : PlayerStateMachine
 
     public override bool IsExecuteOK()
     {
-        if (comboCount == 0 &&
-            (manager.playerState == PlayerState.Move &&
+        if (comboCount == 0 && 
+            (manager.playerState == PlayerState.Move && 
              playerAnimator.IsClipPlaying("Movement")))
             return true;
         return false;
@@ -43,7 +43,7 @@ public class PlayerStateMachine_Attack : PlayerStateMachine
                 state++;
                 break;
             case State.Casting:
-
+                
                 if (playerAnimator.IsClipPlaying(GetClipName()))
                 {
                     comboCount++;
@@ -62,7 +62,7 @@ public class PlayerStateMachine_Attack : PlayerStateMachine
 
                 if (Input.GetMouseButton(0))
                 {
-                    if (comboTimer < 0.6f &&
+                    if (comboTimer < 0.6f && 
                         comboCount < 3)
                     {
                         state = State.Prepare;
