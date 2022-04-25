@@ -6,12 +6,13 @@ public class EnemyController : MonoBehaviour
 {
     public AI ai;
     public bool aiJump;
-    public float aiBehaviourTimeMax = 5f;
-    public float aiBehaviourTimeMin = 1f;
-    public float aiBehaviourTime;
-    public float aiBehaviourTimer;
+    public float aiBehaviorTimeMax = 5f;
+    public float aiBehaviorTimeMin = 1f;
+    public float aiBehaviorTime;
+    public float aiBehaviorTimer;
 
     public float moveSpeed = 2f;
+    public float jumpForce = 5f;
     private Vector3 dir;
 
     private Rigidbody rb;
@@ -19,6 +20,11 @@ public class EnemyController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void Start()
+    {
+        ai++;    
     }
 
     private void Update()
@@ -30,30 +36,31 @@ public class EnemyController : MonoBehaviour
     {
         switch (ai)
         {
-            case AI.DecideRandomBehaviour:
+            case AI.DecideRandomBehavior:
                 ai = (AI)Random.Range(2, 4);
-                aiBehaviourTimer = aiBehaviourTime = Random.Range(aiBehaviourTimeMin, aiBehaviourTimeMax);
+                aiBehaviorTimer = aiBehaviorTime = Random.Range(aiBehaviorTimeMin, aiBehaviorTimeMax);
                 dir = Random.insideUnitSphere;
-                dir = new Vector3(dir.x, 0, dir.z).normalized;
-                aiJump = Random.Range(0.0f, 1.0f) < 0.5f ? true : false;
+                dir = new Vector3 (dir.x, 0, dir.z).normalized;
+                aiJump = Random.Range(0.0f, 1.0f) < 0.3f ? true : false;
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                 break;
             case AI.Rest:
-                if (aiBehaviourTimer < 0)
-                    ai = AI.DecideRandomBehaviour;
+                if (aiBehaviorTimer < 0)
+                    ai = AI.DecideRandomBehavior;
                 else
-                    aiBehaviourTimer -= Time.deltaTime;
+                    aiBehaviorTimer -= Time.deltaTime;
                 break;
             case AI.Move:
-                if (aiBehaviourTimer < 0)
-                    ai = AI.DecideRandomBehaviour;
+                if (aiBehaviorTimer < 0)
+                    ai = AI.DecideRandomBehavior;
                 else
                 {
                     Vector3 deltaMove = dir * moveSpeed * Time.deltaTime;
-                    Quaternion rotation = Quaternion.Look
-                    rb.position += deltaMove
-                    aiBehaviourTimer -= Time.deltaTime;
-                }
+                    Quaternion rotation = Quaternion.LookRotation(dir, Vector3.up);
+                    rb.rotation = rotation;
+                    rb.position += deltaMove;
+                    aiBehaviorTimer -= Time.deltaTime;
+                }                    
                 break;
             case AI.FollowTarget:
                 break;
@@ -63,10 +70,11 @@ public class EnemyController : MonoBehaviour
                 break;
         }
     }
+
     public enum AI
     {
         Idle,
-        DecideRandomBehaviour,
+        DecideRandomBehavior,
         Rest,
         Move,
         FollowTarget,

@@ -4,30 +4,36 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public class Player : MonoBehaviour
+    public float hpMax;
+    private float _hp;
+    public float hp
     {
-        public float hpMax;
-        private float _hp;
-        private float hp
+        set
         {
-            get
+            if (value < 0)
             {
-                if (value < 0)
-                {
-                    value = 0;
-                    // do die
-                }
-                _hp = value;
-
-                if (PlayerUI.instance != null)
-                {
-                    PlayerUI.instance.SetHPBar(_hp / hpMax);
-                }
+                value = 0;
+                // do die
             }
-            get
+
+            _hp = value;
+
+            if (PlayerUI.instance != null)
             {
-                return _hp;
+                PlayerUI.instance.SetHPBar(_hp / hpMax);
             }
         }
+
+        get
+        {
+            return _hp;
+        }
+
+    }
+
+
+    private void Awake()
+    {
+        hp = hpMax;
     }
 }

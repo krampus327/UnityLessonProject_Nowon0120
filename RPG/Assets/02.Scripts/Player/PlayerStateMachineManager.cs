@@ -30,13 +30,15 @@ public class PlayerStateMachineManager : MonoBehaviour
     private void Update()
     {
         // movement
-        if(playerState == PlayerState.Move || playerState == PlayerState.Jump)
+        if (playerState == PlayerState.Move ||
+            playerState == PlayerState.Jump)
         {
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
 
             playerAnimator.SetFloat("h", h);
             playerAnimator.SetFloat("v", v);
+
 
             Vector3 move = cam.rotation * new Vector3(h, 0, v);
             playerMove.SetMove(move.x, move.z);
