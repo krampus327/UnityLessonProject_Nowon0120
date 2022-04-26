@@ -14,13 +14,15 @@ public class Enemy : MonoBehaviour
             {
                 value = 0;
                 // do die
+                DropRandomItem();
+                Destroy(gameObject);
             }
 
             _hp = value;
 
-            if (PlayerUI.instance != null)
+            if (enemyUI != null)
             {
-                PlayerUI.instance.SetHPBar(_hp / hpMax);
+                enemyUI.SetHPBar(_hp / hpMax);
             }
         }
 
@@ -30,10 +32,30 @@ public class Enemy : MonoBehaviour
         }
 
     }
+    [SerializeField] private Item[] dropItems;
+    [SerializeField] private EnemyUI enemyUI;
 
+    public void Hurt(float damage)
+    {
+        hp -= damage;
+    }
 
     private void Awake()
     {
         hp = hpMax;
+    }
+    private void DropRandomItem()
+    {
+        // 드롭아이템 목록이 있는지 체크
+        if (dropItems == null ||
+            dropItems.Length <= 0)
+            return;
+        // 드롬할 아이템
+        Item tmpItem = dropItems[Random.Range(0, dropItems.Length)];
+        // 드롭할 아이템 드롭
+        if(tmpItem != null)
+        {
+            Instantiate(ItemAssets.GetItemPrefab(tmpItem.name), transform.position, Quaternion.identity);
+        }
     }
 }

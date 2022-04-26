@@ -12,6 +12,14 @@ public class PlayerStateMachine_Attack : PlayerStateMachine
     private float comboTimer;
     private int comboCount;
     private Coroutine comboCoroutine = null;
+    public float damage = 10f;
+    private Weapon weapon;
+
+    public override void Awake()
+    {
+        base.Awake();
+        weapon = GetComponentInChildren<Weapon>();
+    }
 
     private void Start()
     {
@@ -46,13 +54,14 @@ public class PlayerStateMachine_Attack : PlayerStateMachine
                 
                 if (playerAnimator.IsClipPlaying(GetClipName()))
                 {
+                    weapon.damage = damage;
                     comboCount++;
                     playerAnimator.SetInt("attackComboCount", comboCount);
                     state++;
                 }
                 else
                 {
-                    Debug.Log($"stocked : casting on {GetClipName()}, combo count {comboCount}");
+                    //Debug.Log($"stocked : casting on {GetClipName()}, combo count {comboCount}");
                 }
                 break;
             case State.OnAction:
@@ -65,6 +74,7 @@ public class PlayerStateMachine_Attack : PlayerStateMachine
                     if (comboTimer < 0.6f && 
                         comboCount < 3)
                     {
+                        weapon.damage = 0;
                         state = State.Prepare;
                     }
                 }
@@ -72,7 +82,10 @@ public class PlayerStateMachine_Attack : PlayerStateMachine
                 if (comboTimer < 0.5f)
                 {
                     if (state != State.Prepare)
+                    {
+                        weapon.damage = 0;
                         state++;
+                    }
                 }
                 break;
             case State.Finish:

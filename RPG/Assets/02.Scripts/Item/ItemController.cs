@@ -7,7 +7,7 @@ public class ItemController : MonoBehaviour
     public Item item;
     public int num = 1;
 
-    [Header("Floating Effact")]
+    [Header("Floating Effect")]
     public bool doFloatingEffect;
     public float floatingSpeed;
     public float floatingHeight;
@@ -15,6 +15,7 @@ public class ItemController : MonoBehaviour
     [Header("Dropping Effect")]
     public float popForce;
     public float rotateSpeed;
+      
 
     [Header("Kinematics")]
     private Rigidbody rb;
@@ -22,11 +23,11 @@ public class ItemController : MonoBehaviour
 
     public LayerMask groundLayer;
     private Transform rendererTransform;
-    private Vector3 RendererOffset;
+    private Vector3 rendererOffset;
     private float elapsedFixedTime;
-    //============================================================================
-    //******************************** Public Methods ****************************
-    //============================================================================
+    //====================================================================
+    //************************** Public Methods **************************
+    //====================================================================
 
     public void PickUp()
     {
@@ -34,33 +35,36 @@ public class ItemController : MonoBehaviour
         // to do -> 픽업 효과
     }
 
-    //============================================================================
-    //****************************** Private Methods *****************************
-    //============================================================================
+    //====================================================================
+    //************************** Private Methods *************************
+    //====================================================================
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        col = rb.GetComponent<BoxCollider>();
+        col = GetComponent<BoxCollider>();
         rendererTransform = transform.Find("Renderer");
-        renderer = 
+        rendererOffset = rendererTransform.localPosition;
     }
 
     private void OnEnable()
     {
         elapsedFixedTime = 0;
     }
-
     private void FixedUpdate()
     {
         if (doFloatingEffect)
             Floating();
-
     }
 
     private void Floating()
     {
-        rendererTransform.localPosition = rendererOffset + new Vector3(0f, floatingHeight * Mathf.Sin(floatingSpeed * elapsedFixedTime), 0f);
-        elapsedFixedTime += Time.deltaTime;
+        rendererTransform.localPosition = rendererOffset +
+                                          new Vector3(0f,
+                                                      floatingHeight * Mathf.Sin(floatingSpeed * elapsedFixedTime),
+                                                      0f);
+        elapsedFixedTime += Time.fixedDeltaTime;
     }
+
+
 }
