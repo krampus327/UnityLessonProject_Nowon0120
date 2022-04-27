@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   name: WMSword_Black
-  description: This is a sword made with water-melon
-  price: 100
+  description: This is a black version of sword made with water-melon
+  price: 200
   numMax: 1
   icon: {fileID: 21300000, guid: c87c2bd633fa65142a15de55f80afa45, type: 3}

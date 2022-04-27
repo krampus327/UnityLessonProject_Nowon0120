@@ -38,7 +38,7 @@ public class PlayerStateMachineManager : MonoBehaviour
 
             playerAnimator.SetFloat("h", h);
             playerAnimator.SetFloat("v", v);
-            Debug.Log($"{h},{v}");
+
 
             Vector3 move = cam.rotation * new Vector3(h, 0, v);
             playerMove.SetMove(move.x, move.z);

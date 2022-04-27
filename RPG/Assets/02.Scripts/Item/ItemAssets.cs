@@ -9,7 +9,7 @@ public class ItemAssets : MonoBehaviour
     {
         get
         {
-            if(_instance == null)
+            if (_instance == null)
                 _instance = Instantiate(Resources.Load<ItemAssets>("Assets/ItemAssets"));
             return _instance;
         }
