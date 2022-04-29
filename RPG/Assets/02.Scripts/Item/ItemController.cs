@@ -15,7 +15,7 @@ public class ItemController : MonoBehaviour
     [Header("Dropping Effect")]
     public float popForce = 1f;
     public float rotateSpeed = 1f;
-
+      
     [Header("Kinematics")]
     private Rigidbody rb;
     private BoxCollider col;
@@ -35,6 +35,7 @@ public class ItemController : MonoBehaviour
         if (coroutine == null)
         {
             // to do -> 인벤토리에 아이템 추가
+            InventoryView.instance.GetItemsView(item.type)
             coroutine = StartCoroutine(E_PickUpEffect(player));
         }
     }
@@ -100,7 +101,9 @@ public class ItemController : MonoBehaviour
         rb.useGravity = false;
         bool isReachedToPlayer = false;
         CharacterController playerCol = player.GetComponent<CharacterController>();
-        Vector3 playerOffSet = new Vector3(0, playerCol.height / 2 + playerCol.radius, 0);
+        Vector3 playerOffset = new Vector3(0,
+                                           playerCol.height / 2 + playerCol.radius,
+                                           0);
 
         MeshRenderer meshRenderer = rendererTransform.GetComponent<MeshRenderer>();
         float fadeAlpha = 1f;
@@ -112,20 +115,19 @@ public class ItemController : MonoBehaviour
         while (pickUpTimer > 0 && isReachedToPlayer == false)
         {
             // 아이템과 플레이어 사이 거리
-            float distance = (Vector3.Distance(player.transform.position + playerOffSet, rb.position));
-
+            float distance = (Vector3.Distance(player.transform.position + playerOffset, rb.position));
+            Debug.Log(distance);
             // 아이템이 플레이어게 도달함
             if (distance < 0.1f)
             {
                 isReachedToPlayer = true;
                 rb.velocity = Vector3.zero;
                 break;
-            }
+            }   
 
             // 아이템 -> 플레이어 로 날아갈 속도 벡터
-            Vector3 moveVec = player.transform.position - rb.position;
+            Vector3 moveVec = (player.transform.position + playerOffset - rb.position) * 5;
 
-            Debug.Log(moveVec);
             // 날아가자
             //transform.position += moveVec * Time.deltaTime; // 단순 transform 포지션 변경, rb 포지션과 속도 연산 추가 필요
             //rb.position += moveVec * Time.deltaTime; // 단순 rb 포지션 변경
@@ -134,8 +136,11 @@ public class ItemController : MonoBehaviour
             // 색변경
             fadeAlpha -= Time.deltaTime;
             fadeColor = new Color(fadeColor.r, fadeColor.g, fadeColor.b, fadeAlpha);
-            meshRenderer.material.color = fadeColor;
 
+            if (meshRenderer.material.GetColor("_Color") != null)
+            {
+                meshRenderer.material.SetColor("_Color", fadeColor);
+            }
             pickUpTimer -= Time.deltaTime;
             yield return null;
         }

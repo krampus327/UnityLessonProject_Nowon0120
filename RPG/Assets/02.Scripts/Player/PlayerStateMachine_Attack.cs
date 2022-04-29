@@ -58,19 +58,16 @@ public class PlayerStateMachine_Attack : PlayerStateMachine
                     comboCount++;
                     playerAnimator.SetInt("attackComboCount", comboCount);
 
-                    //캐스팅 동안 무기에 닿은 모든 타겟 가져옴
+                    Debug.Log($"Attack : detected target count: {weapon.GetTargets().Count}");
+                    // 캐스팅 동안 무기에 닿은 모든 타겟 가져옴
                     foreach (var target in weapon.GetTargets())
                     {
-                        // 타겟이 에너미이면 다치게함
-                        if(target.TryGetComponent(out Enemy enemy))
+                        // 타겟이 에너미 이면 다치게함
+                        if (target.TryGetComponent(out Enemy enemy))
                             enemy.Hurt(damage);
                     }
                     weapon.doCasting = false;
                     state++;
-                }
-                else
-                {
-                    Debug.Log($"stocked : casting on {GetClipName()}, combo count {comboCount}");
                 }
                 break;
             case State.OnAction:

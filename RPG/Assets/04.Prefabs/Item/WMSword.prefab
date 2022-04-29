@@ -126,7 +126,7 @@ MonoBehaviour:
   floatingSpeed: 1
   floatingHeight: 0.25
   popForce: 5
-  rotateSpeed: 500
+  rotateSpeed: 2000
   groundLayer:
     serializedVersion: 2
     m_Bits: 2097152

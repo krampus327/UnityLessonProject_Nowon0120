@@ -5,14 +5,6 @@ using System.Linq;
 
 public class Weapon : MonoBehaviour
 {
-    private float _damage;
-    public float damage
-    {
-        set
-        {
-            _damage = value;
-        }
-    }
     public LayerMask targetLayer;
 
     private bool _doCasting;
@@ -27,12 +19,13 @@ public class Weapon : MonoBehaviour
             _doCasting = value;
         }
     }
-    public Dictionary<int, GameObject> targets = new Dictionary<int, GameObject>();
+    private Dictionary<int, GameObject> targets = new Dictionary<int, GameObject> ();
 
     public List<GameObject> GetTargets()
     {
         return targets.Values.ToList();
     }
+
     private void OnCollisionStay(Collision collision)
     {
         if (_doCasting)
@@ -41,8 +34,7 @@ public class Weapon : MonoBehaviour
             {
                 if (collision.gameObject.TryGetComponent(out Enemy enemy))
                 {
-                    //Object 의 고유 해시를 구하는 함수
-                    int hash = collision.gameObject.GetHashCode();
+                    int hash = collision.gameObject.GetHashCode();// Object 의 고유 해시를 구하는 함수
                     if (targets.ContainsKey(hash) == false)
                         targets.Add(hash, collision.gameObject);
                 }
