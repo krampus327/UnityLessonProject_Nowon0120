@@ -1,9 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
-
 public class InventorySlot : MonoBehaviour
 {
-    public bool isItemExist;
+    public bool isItemExist
+    {
+        get
+        {
+            return num > 0 ? true : false;
+        }
+    }
     public int id;
     public string itemName;
     public string description;
@@ -12,11 +17,11 @@ public class InventorySlot : MonoBehaviour
 
     [SerializeField] private Image _image;
 
-    public void SetUp(Item item, int itemnum)
+    public void SetUp(Item item, int itemNum)
     {
         itemName = item.name;
         description = item.description;
-        num = itemnum;
+        num = itemNum;
         icon = item.icon;
 
         _image.sprite = icon;

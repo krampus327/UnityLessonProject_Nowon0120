@@ -8,7 +8,7 @@ public class InventoryItemsView : MonoBehaviour
     public int totalSlotNumber = 12;
     public GameObject slotPrefab;
     private List<InventorySlot> slots = new List<InventorySlot>();
-    
+
     private void Start()
     {
         SetUp();
@@ -16,43 +16,61 @@ public class InventoryItemsView : MonoBehaviour
 
     private void SetUp()
     {
-        for(int i = 0; i < totalSlotNumber; i++)
+        InventorySlot tmpSlot = null;
+        for (int i = 0; i < totalSlotNumber; i++)
         {
-            slots.Add(Instantiate(slotPrefab, content).GetComponent<InventorySlot>());
+            tmpSlot = Instantiate(slotPrefab)
         }
     }
 
     public int AddItem(Item item, int itemNum)
     {
-        bool remain = itemNum;
-        InventorySlot tmpSlot = slots.Find(x => x.itemName == item.name);
-        // 동일한 아이템이 이미 존재하는지
+        if (itemNum <= 0)
+            return 0;
+
+        int remain = itemNum;
+
+
+        InventorySlot tmpSlot = slots.Find(x => x.itemName == item.name && x.num < item.numMax);
+        // 동일한 아이템이 존재하면
         if (tmpSlot != null)
         {
-            // 습득하려는 갯수 + 기존 아이템 갯수가 최대 갯수 이하이면 해당슬롯 갯수 추가
-            if(itemNum + tmpSlot.num <= item.numMax)
+            //습득하려는 갯수 + 기존 아이템 갯수가 최대 갯수 이하이면 해당슬롯 갯수 추가
+            if (itemNum + tmpSlot.num <= item.numMax)
             {
                 tmpSlot.num += itemNum;
                 remain = 0;
             }
             else
             {
-                int remain = tmpSlot.num + itemNum - item.numMax; // 다음 슬롯에 추가할 갯수
+                remain = tmpSlot.num + itemNum - item.numMax; // 다음 슬롯에 추가할 갯수
                 int tmp = itemNum - remain; // 현재 슬롯에 추가할 갯수
 
                 tmpSlot.num += tmp;
-                isAdded = true;
+
+                // 빈슬롯 검색
+                tmpSlot = slots.Find(x => 
+                    (x.isItemExist == false) || 
+                    ((x.itemName == item.name) && (x.num < item.numMax))
+                );
+
+                // 빈 슬롯 있으면
+                if (tmpSlot != null)
+                     return AddItem(item, remain);
+                else
+                    return remain;
             }
         }
         // 동일한 아이템이 없으면
         else
         {
-            // 빈 슬롯 검색
-            tmpSlot = slots.Find(x => x.isItemExist == false) || ((x.itemName == item.name) && (x.num < item.numMax));
+            // 빈슬롯 검색
+            tmpSlot = slots.Find(x => x.isItemExist == false);
             // 빈 슬롯 있으면
-            if(tmpSlot != null)
+            if (tmpSlot != null)
             {
-                AddItem(item, itemNum);
+                tmpSlot.SetUp(item, itemNum);
+                remain = 0;
             }
         }
         return remain;

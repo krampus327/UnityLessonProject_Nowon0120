@@ -14,6 +14,7 @@ public class InventoryView : MonoBehaviour
     {
         instance = this;
     }
+
     public InventoryItemsView GetItemsView(ItemType itemType)
     {
         InventoryItemsView tmpView = null;

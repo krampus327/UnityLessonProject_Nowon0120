@@ -34,8 +34,8 @@ public class ItemController : MonoBehaviour
     {
         if (coroutine == null)
         {
-            // to do -> 인벤토리에 아이템 추가
-            InventoryView.instance.GetItemsView(item.type)
+            int remain = InventoryView.instance.GetItemsView(item.type).AddItem(item, num);
+            Debug.Log($"플레이어가 아이템 {item.name} {num-remain}개 획득했습니다.");
             coroutine = StartCoroutine(E_PickUpEffect(player));
         }
     }
