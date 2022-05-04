@@ -54,8 +54,8 @@ public class PlayerStateMachineManager : MonoBehaviour
             ChangePlayerState(PlayerState.Jump);
 
         // Attack
-        if (Input.GetMouseButton(0))
-            ChangePlayerState(PlayerState.Attack);            
+        if (Input.GetMouseButton(0) && Cursor.visible == false)
+            ChangePlayerState(PlayerState.Attack);
 
         UpdatePlayerState();
     }

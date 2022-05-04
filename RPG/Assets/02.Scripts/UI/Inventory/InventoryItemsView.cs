@@ -9,7 +9,7 @@ public class InventoryItemsView : MonoBehaviour
     public GameObject slotPrefab;
     private List<InventorySlot> slots = new List<InventorySlot>();
 
-    private void Start()
+    private void Awake()
     {
         SetUp();
     }
@@ -19,19 +19,20 @@ public class InventoryItemsView : MonoBehaviour
         InventorySlot tmpSlot = null;
         for (int i = 0; i < totalSlotNumber; i++)
         {
-            tmpSlot = Instantiate(slotPrefab)
+            tmpSlot = Instantiate(slotPrefab, content).GetComponent<InventorySlot>();
+            tmpSlot.id = i;
+            slots.Add(tmpSlot);
         }
     }
 
     public int AddItem(Item item, int itemNum)
     {
-        if (itemNum <= 0)
+        if (itemNum <= 0) 
             return 0;
 
         int remain = itemNum;
 
-
-        InventorySlot tmpSlot = slots.Find(x => x.itemName == item.name && x.num < item.numMax);
+        InventorySlot tmpSlot = slots.Find(x => x.isItemExist && x.item.name == item.name && x.num < item.numMax);
         // 동일한 아이템이 존재하면
         if (tmpSlot != null)
         {
@@ -51,7 +52,7 @@ public class InventoryItemsView : MonoBehaviour
                 // 빈슬롯 검색
                 tmpSlot = slots.Find(x => 
                     (x.isItemExist == false) || 
-                    ((x.itemName == item.name) && (x.num < item.numMax))
+                    ((x.item.name == item.name) && (x.num < item.numMax))
                 );
 
                 // 빈 슬롯 있으면

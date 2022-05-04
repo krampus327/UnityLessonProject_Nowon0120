@@ -1,29 +1,95 @@
 using UnityEngine;
 using UnityEngine.UI;
-public class InventorySlot : MonoBehaviour
+using UnityEngine.EventSystems;
+public class InventorySlot : MonoBehaviour , IPointerDownHandler
 {
     public bool isItemExist
     {
         get
         {
-            return num > 0 ? true : false;
+            return _num > 0 ? true : false;
         }
     }
-    public int id;
-    public string itemName;
-    public string description;
-    public int num;
-    public Sprite icon;
+    private int _id;
+    public int id
+    {
+        set
+        {
+            _id = value;
+        }
+
+        get
+        {
+            return _id;
+        }
+    }
+    private string _description;
+    private int _num;
+    public int num
+    {
+        set
+        {
+            _num = value;
+
+            if (_num > 1)
+                _numText.text = _num.ToString();
+            else
+                _numText.text = "";
+        }
+
+        get
+        {
+            return _num;
+        }
+    }
+    private Item _item;
+
+    public Item item
+    {
+        set
+        {
+            _item = value;
+            if(_item != null)
+                _image.sprite = _item.icon;
+            else
+                _image.sprite = null;
+        }
+        get
+        {
+            return _item;
+        }
+    }
+   
 
     [SerializeField] private Image _image;
+    [SerializeField] private Text _numText;
 
-    public void SetUp(Item item, int itemNum)
+    public void SetUp(Item _item, int _num)
     {
-        itemName = item.name;
-        description = item.description;
-        num = itemNum;
-        icon = item.icon;
+        //Debug.Log($"Setup Slot {item.name}, {itemNum}");
 
-        _image.sprite = icon;
+        if (_item != null)
+        {
+            num = _num;
+            item = _item;
+        }
+        else
+            Clear();
+
+    }
+
+    public void Clear()
+    {
+        item = null;
+        num = 0;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (isItemExist && InventoryItemHandler.instance.gameObject.activeSelf == false)
+        {
+            InventoryItemHandler.instance.SetUp(this, _item.icon);
+            InventoryItemHandler.instance.gameObject.SetActive(true);
+        }
     }
 }

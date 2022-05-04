@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance { get; private set; }
     public float hpMax;
     private float _hp;
     public float hp
@@ -61,12 +62,14 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         _hp = hpMax;
+        Instance = this;
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Item"))
         {
+            if(Input.GetKey(KeyCode.Z))
             other.gameObject.GetComponent<ItemController>().PickUp(this);
         }
     }
