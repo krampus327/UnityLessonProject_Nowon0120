@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static Player Instance { get; private set; }
+    public static Player instance;
     public float hpMax;
     private float _hp;
     public float hp
@@ -59,18 +59,45 @@ public class Player : MonoBehaviour
 
     }
 
+    public Transform weapon1Point;
+
+    public bool EquipWeapon1(GameObject weaponPrefab)
+    {
+        if(weapon1Point.childCount > 0)
+        {
+            Destroy(weapon1Point.GetChild(0).gameObject);
+        }
+
+        UnequipWeapon1();
+        Instantiate(weaponPrefab, weapon1Point);
+        return true;
+    }
+
+    public bool UnequipWeapon1()
+    {
+        if (weapon1Point.childCount > 0)
+        {
+            GameObject weapon1 = weapon1Point.GetChild(0).gameObject;
+            Item item = weapon1.GetComponent<Equipment>().item;
+            InventoryView.instance.GetItemsView(ItemType.Equip).AddItem(item,1);
+            Destroy(weapon1);
+            return true;
+        }
+        return false;
+    }
+
     private void Awake()
     {
+        instance = this;
         _hp = hpMax;
-        Instance = this;
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Item"))
         {
-            if(Input.GetKey(KeyCode.Z))
-            other.gameObject.GetComponent<ItemController>().PickUp(this);
+            if (Input.GetKey(KeyCode.Z))
+                other.gameObject.GetComponent<ItemController>().PickUp(this);
         }
     }
 }

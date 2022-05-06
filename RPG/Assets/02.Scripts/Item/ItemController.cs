@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemController : MonoBehaviour
+public class ItemController : MonoBehaviour, IUseable
 {
     public Item item;
     public int num = 1;
@@ -34,11 +34,17 @@ public class ItemController : MonoBehaviour
     {
         if (coroutine == null)
         {
-            int remain   = InventoryView.instance.GetItemsView(item.type).AddItem(item, num);
+            int remain = InventoryView.instance.GetItemsView(item.type).AddItem(item, num);
             Debug.Log($"플레이어가 아이템 {item.name} {num - remain} 개 획득 했습니다");
-            if(remain <= 0)
+
+            if (remain <= 0)
                 coroutine = StartCoroutine(E_PickUpEffect(player));
         }
+    }
+
+    public virtual void Use()
+    {
+
     }
 
     //====================================================================

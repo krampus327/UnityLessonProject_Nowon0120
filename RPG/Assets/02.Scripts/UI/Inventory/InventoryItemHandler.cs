@@ -31,14 +31,15 @@ public class InventoryItemHandler : MonoBehaviour
             // UI 캐스트 됨
             if (results.Count > 0)
             {
-                // item slot 있는지 
+                bool isSlotExist = false;
+                // item slot 있는지
                 foreach (var result in results)
                 {
                     if (result.gameObject.TryGetComponent(out InventorySlot slot))
                     {
                         // 슬롯번호와 슬롯에 있는 아이템이름 같으면 암것도 하지않음
                         if (_slot.id == slot.id &&
-                            _slot.item.name == slot.item.name)
+                            _slot.item.name == slot.item.name )
                         {
                             gameObject.SetActive(false);
                         }
@@ -50,30 +51,35 @@ public class InventoryItemHandler : MonoBehaviour
                             slot.SetUp(_slot.item, _slot.num);
                             _slot.SetUp(tmpItem, tmpNum);
 
-                            gameObject.SetActive(false);
+                            Clear();
                         }
-
+                        // 슬롯없으면
+                        isSlotExist = true;
                         break;
                     }
+                    
                 }
+                if(isSlotExist == false)
+                    Clear();
             }
-            // 필드에 마우스 왼쪽 클릭 했으므로 아이템 드롭 
+            // 필드에 마우스 왼쪽 클릭 했으므로 아이템 드롭
             else
             {
                 // 드롭할 아이템 드롭
                 GameObject tmpPrefab = ItemAssets.GetItemPrefab(_slot.item.name);
-                if (_slot.item != null)
+                if (tmpPrefab != null)
                 {
                     _slot.Clear();
-                    Instantiate(tmpPrefab, Player.Instance.transform.position, Quaternion.identity);
-                }
+                    Instantiate(tmpPrefab, Player.instance.transform.position, Quaternion.identity);
+                }   
                 Clear();
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Mouse1))
+        else if (Input.GetMouseButtonDown(1))
         {
             Clear();
         }
+
     }
     private void Awake()
     {
@@ -95,6 +101,7 @@ public class InventoryItemHandler : MonoBehaviour
         _slot = slot;
         _image.sprite = icon;
     }
+
     public void Clear()
     {
         SetUp(null, null);

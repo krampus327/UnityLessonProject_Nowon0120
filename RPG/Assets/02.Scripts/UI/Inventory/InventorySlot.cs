@@ -23,7 +23,6 @@ public class InventorySlot : MonoBehaviour , IPointerDownHandler
             return _id;
         }
     }
-    private string _description;
     private int _num;
     public int num
     {
@@ -33,8 +32,12 @@ public class InventorySlot : MonoBehaviour , IPointerDownHandler
 
             if (_num > 1)
                 _numText.text = _num.ToString();
-            else
+            else if (_num == 1)
                 _numText.text = "";
+            else
+            {
+                Clear();
+            }
         }
 
         get
@@ -42,6 +45,7 @@ public class InventorySlot : MonoBehaviour , IPointerDownHandler
             return _num;
         }
     }
+
     private Item _item;
 
     public Item item
@@ -49,22 +53,25 @@ public class InventorySlot : MonoBehaviour , IPointerDownHandler
         set
         {
             _item = value;
-            if(_item != null)
+            if (_item != null)
                 _image.sprite = _item.icon;
             else
                 _image.sprite = null;
         }
+
         get
         {
             return _item;
         }
     }
-   
 
     [SerializeField] private Image _image;
     [SerializeField] private Text _numText;
 
-    public void SetUp(Item _item, int _num)
+    public delegate void OnUse();
+    private OnUse _OnUse;
+
+    public void SetUp(Item _item, int _num, OnUse useEvent)
     {
         //Debug.Log($"Setup Slot {item.name}, {itemNum}");
 
@@ -72,6 +79,7 @@ public class InventorySlot : MonoBehaviour , IPointerDownHandler
         {
             num = _num;
             item = _item;
+            _OnUse = useEvent;
         }
         else
             Clear();
@@ -82,14 +90,27 @@ public class InventorySlot : MonoBehaviour , IPointerDownHandler
     {
         item = null;
         num = 0;
+        _OnUse = null;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (isItemExist && InventoryItemHandler.instance.gameObject.activeSelf == false)
+        if (isItemExist)
         {
-            InventoryItemHandler.instance.SetUp(this, _item.icon);
-            InventoryItemHandler.instance.gameObject.SetActive(true);
+            if(eventData.button == PointerEventData.InputButton.Left)
+            {
+                if (InventoryItemHandler.instance.gameObject.activeSelf == false)
+                {
+                    InventoryItemHandler.instance.SetUp(this, _item.icon);
+                    InventoryItemHandler.instance.gameObject.SetActive(true);
+                }
+            }
+            else if (eventData.button == PointerEventData.InputButton.Right)
+            {
+                if (_OnUse != null)
+                    _OnUse();
+            }
+            
         }
     }
 }
