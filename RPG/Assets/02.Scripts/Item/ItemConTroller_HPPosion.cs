@@ -1,4 +1,4 @@
-﻿public class ItemConTroller_HPPosion : ItemController
+﻿public class ItemController_HPPosion : ItemController_Spend
 {
     public override void Use()
     {

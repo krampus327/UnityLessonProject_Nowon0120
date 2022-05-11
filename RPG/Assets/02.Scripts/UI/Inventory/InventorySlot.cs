@@ -69,7 +69,7 @@ public class InventorySlot : MonoBehaviour , IPointerDownHandler
     [SerializeField] private Text _numText;
 
     public delegate void OnUse();
-    private OnUse _OnUse;
+    public OnUse _OnUse;
 
     public void SetUp(Item _item, int _num, OnUse useEvent)
     {
@@ -88,16 +88,18 @@ public class InventorySlot : MonoBehaviour , IPointerDownHandler
 
     public void Clear()
     {
-        item = null;
-        num = 0;
+        _item = null;
+        _num = 0;
         _OnUse = null;
+        _numText.text = "";
+        _image.sprite = null;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (isItemExist)
+        if (isItemExist )
         {
-            if(eventData.button == PointerEventData.InputButton.Left)
+            if (eventData.button == PointerEventData.InputButton.Left)
             {
                 if (InventoryItemHandler.instance.gameObject.activeSelf == false)
                 {
@@ -110,7 +112,6 @@ public class InventorySlot : MonoBehaviour , IPointerDownHandler
                 if (_OnUse != null)
                     _OnUse();
             }
-            
         }
     }
 }

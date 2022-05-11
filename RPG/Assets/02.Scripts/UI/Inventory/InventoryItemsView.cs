@@ -25,7 +25,7 @@ public class InventoryItemsView : MonoBehaviour
         }
     }
 
-    public int AddItem(Item item, int itemNum)
+    public int AddItem(Item item, int itemNum, InventorySlot.OnUse useEvent)
     {
         if (itemNum <= 0) 
             return 0;
@@ -59,7 +59,7 @@ public class InventoryItemsView : MonoBehaviour
 
                 // ºó ½½·Ô ÀÖÀ¸¸é
                 if (tmpSlot != null)
-                     return AddItem(item, remain);
+                     return AddItem(item, remain, useEvent);
                 else
                     return remain;
             }
@@ -72,19 +72,23 @@ public class InventoryItemsView : MonoBehaviour
             // ºó ½½·Ô ÀÖÀ¸¸é
             if (tmpSlot != null)
             {
-                tmpSlot.SetUp(item, itemNum);
+                tmpSlot.SetUp(item, itemNum, useEvent);
                 remain = 0;
             }
         }
         return remain;
     }
+
     public bool Remove(Item item, int itemNum)
     {
         if (itemNum <= 0)
             return false;
-        InventorySlot tmpSlot = slots.Find(x => x.isItemExist && x.item.name == item.name && x.num >= itemNum);
 
-        if(tmpSlot != null)
+        InventorySlot tmpSlot = slots.Find(x => x.isItemExist &&
+                                                x.item.name == item.name &&
+                                                x.num >= itemNum);
+
+        if (tmpSlot != null)
         {
             tmpSlot.num -= itemNum;
             return true;

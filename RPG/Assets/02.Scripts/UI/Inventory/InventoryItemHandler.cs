@@ -32,7 +32,7 @@ public class InventoryItemHandler : MonoBehaviour
             if (results.Count > 0)
             {
                 bool isSlotExist = false;
-                // item slot 있는지
+                // item slot 있는지 
                 foreach (var result in results)
                 {
                     if (result.gameObject.TryGetComponent(out InventorySlot slot))
@@ -48,19 +48,20 @@ public class InventoryItemHandler : MonoBehaviour
                         {
                             Item tmpItem = slot.item;
                             int tmpNum = slot.num;
-                            slot.SetUp(_slot.item, _slot.num);
-                            _slot.SetUp(tmpItem, tmpNum);
+                            InventorySlot.OnUse tmpOnUse = slot._OnUse;
+                            slot.SetUp(_slot.item, _slot.num, _slot._OnUse);
+                            _slot.SetUp(tmpItem, tmpNum, tmpOnUse);
 
                             Clear();
                         }
-                        // 슬롯없으면
                         isSlotExist = true;
                         break;
                     }
-                    
                 }
-                if(isSlotExist == false)
+                //슬롯 없으면
+                if (isSlotExist == false)
                     Clear();
+
             }
             // 필드에 마우스 왼쪽 클릭 했으므로 아이템 드롭
             else
