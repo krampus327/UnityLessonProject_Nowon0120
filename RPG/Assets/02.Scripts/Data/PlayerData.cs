@@ -1,14 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlayerData
+/// <summary>
+/// 플레이어의 이름과 스텟 데이터
+/// </summary>
+public class PlayerData // 단지 데이터 처리용 클래스이기 때문에 Monobehavior 상속받을 필요 없다.
 {
     public string nickName;
     public Stats stats;
-    public List<InventoryItemData> items;
-
-    public PlayerData(string newNickName)
+    
+    /// <summary>
+    /// 스텟 초기화
+    /// todo -> 나중에 스텟을 위한 테이블을 참조하는 형태로 수정해야함.
+    /// </summary>
+    /// <param name="newNickName"> 생성할 캐릭터 이름 </param>
+    public PlayerData(string newNickName) // Monobehavior를 상속받지 않았기 때문에 생성자 사용 가능.
     {
         nickName = newNickName;
         stats = new Stats()
@@ -31,36 +34,13 @@ public class PlayerData
 
             statPoint = 0
         };
-        items = new List<InventoryItemData>();
+        
     }
 
-    public void SetItemData(ItemType type, string itemName, int num, int slotID)
-    {
-        InventoryItemData oldData = items.Find(x => x.type == type && x.slotID == slotID);
-        if (oldData == null)
-            items.Remove(oldData);
-        items.Add(new InventoryItemData()
-        {
-            type = type,
-            itemName = itemName,
-            num = num,
-            slotID = slotID
-        });
-        // todo -> 데이터 저장하기
-    }
-
-    public void RemoveItemData(ItemType type, string itemName, int slotID)
-    {
-        InventoryItemData oldData = items.Find(x => x.type == type && x.itemName == itemName && x.slotID == slotID);
-        if (oldData != null)
-        {
-            items.Remove(oldData);
-            // todo -> 데이터 저장하기
-        }   
-    }
+    
 }
 
-[System.Serializable]
+[System.Serializable] // json 포멧 등으로 직렬화/역직렬화 할 수 있게 하기 위한 속성
 public class Stats
 {
     public int LV;
@@ -82,14 +62,7 @@ public class Stats
     public int statPoint;
 }
 
-[System.Serializable]
-public class InventoryItemData
-{
-    public ItemType type;
-    public string itemName;
-    public int num;
-    public int slotID;
-}
+
 
 //[System.Serializable]
 //public struct SavePoint
